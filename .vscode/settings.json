@@ -1,0 +1,18 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "${PATH_TO_FX}/jfx.incubator.richtext.jar",
+        "${PATH_TO_FX}/jfx.incubator.input.jar",
+        "${PATH_TO_FX}/jdk.jsobject.jar",
+        "${PATH_TO_FX}/javafx.web.jar",
+        "${PATH_TO_FX}/javafx.swing.jar",
+        "${PATH_TO_FX}/javafx.media.jar",
+        "${PATH_TO_FX}/javafx.graphics.jar",
+        "${PATH_TO_FX}/javafx.fxml.jar",
+        "${PATH_TO_FX}/javafx.controls.jar",
+        "${PATH_TO_FX}/javafx.base.jar",
+        "${PATH_TO_FX}/javafx-swt.jar"
+    ]
+}
