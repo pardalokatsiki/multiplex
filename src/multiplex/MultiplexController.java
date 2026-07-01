@@ -34,6 +34,9 @@ public class MultiplexController {
         root = FXMLLoader.load(getClass().getResource("CreateUserPageScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+
+        String css = this.getClass().getResource("css-files/registerPage.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
@@ -50,6 +53,10 @@ public class MultiplexController {
         root = FXMLLoader.load(getClass().getResource("LoginPageScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+
+        String css = this.getClass().getResource("css-files/loginPage.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
         stage.setScene(scene);
         stage.show();
     }
