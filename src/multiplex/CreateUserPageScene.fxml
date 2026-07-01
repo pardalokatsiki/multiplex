@@ -14,10 +14,12 @@
          </font>
       </Label>
       <Label layoutX="243.0" layoutY="273.0" prefHeight="22.0" prefWidth="78.0" text="Username:" />
-      <Label layoutX="243.0" layoutY="319.0" prefHeight="22.0" prefWidth="70.0" text="Password: " />
+      <Label layoutX="243.0" layoutY="319.0" prefHeight="22.0" prefWidth="70.0" text="Email: " />
       <TextField fx:id="createUsername" layoutX="342.0" layoutY="271.0" />
-      <TextField fx:id="createPass" layoutX="342.0" layoutY="317.0" />
+      <TextField fx:id="createEmail" layoutX="342.0" layoutY="315.0" />
       <Label layoutX="259.0" layoutY="197.0" text="We will be happy if you join our team! :-)" />
       <Button fx:id="createAccountButton" layoutX="319.0" layoutY="404.0" mnemonicParsing="false" onAction="#createAccountClick" text="Create account" />
+      <Label layoutX="244.0" layoutY="360.0" prefHeight="22.0" prefWidth="70.0" text="Password: " />
+      <TextField fx:id="createPass" layoutX="342.0" layoutY="358.0" />
    </children>
 </AnchorPane>

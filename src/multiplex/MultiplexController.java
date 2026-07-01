@@ -42,6 +42,7 @@ public class MultiplexController {
     public void createAccountClick(ActionEvent event) throws IOException {
         String username = createUsername.getText();
         String password = createPass.getText();
+        String email = createEmail.getText();
         
         //TODO Add SQL query to save user credentials
         
@@ -73,10 +74,13 @@ public class MultiplexController {
 
     @FXML
     private Button createAccountButton;
-
-    @FXML
-    private TextField createPass;
-
+    
     @FXML
     private TextField createUsername;
+    
+    @FXML
+    private TextField createEmail;
+    
+    @FXML
+    private TextField createPass;
 }
