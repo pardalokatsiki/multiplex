@@ -6,14 +6,18 @@ public class Movie {
     private String title;
     private int duration_min;
     private String info;
+    private String showDate;
+    private String showTime;
     
     
-    public Movie(int id, String title, int duration_min, String info){
+    public Movie(int id, String title, int duration_min, String info,String showDate,String showTime){
         
         this.id = id;
         this.title = title;
         this.duration_min = duration_min;
         this.info = info;
+        this.showDate = showDate;
+        this.showTime = showTime;
         
     }
 
@@ -33,6 +37,15 @@ public class Movie {
         return info;
     }
 
+     public String getShowDate() {
+        return showDate;
+    }
+
+    public String getShowTime() {
+        return showTime;
+    }
+
+    
     public void setId(int id) {
         this.id = id;
     }
@@ -48,5 +61,15 @@ public class Movie {
     public void setInfo(String info) {
         this.info = info;
     }
+
+    public void setShowDate(String showDate) {
+        this.showDate = showDate;
+    }
+
+    public void setShowTime(String showTime) {
+        this.showTime = showTime;
+    }
+    
+     
     
 }
