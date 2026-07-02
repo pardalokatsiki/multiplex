@@ -11,6 +11,7 @@
 #createAccountButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#da627d";
+    -fx-font-family: "Comic Sans MS";
     -fx-font-weight: bold;
 }
 
