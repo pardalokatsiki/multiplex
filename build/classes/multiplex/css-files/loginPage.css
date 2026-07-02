@@ -1,0 +1,27 @@
+.root{
+    -fx-background-color:"#F07FBB";
+    -fx-font-family: "Monospace";
+}
+
+#loginButton{
+    -fx-background-color:"#E9449C";
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+#loginButton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#C23DBD";
+    -fx-font-weight: bold;
+}
+
+#registerLink{
+    -fx-text-fill:"#5A1C51";
+}
+
+.textField{
+    -fx-background-color: "#F9EBF7";
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
