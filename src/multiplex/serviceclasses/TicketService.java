@@ -33,6 +33,9 @@ public class TicketService {
     //Cancel ticket method, this method will delete a ticket from the Tickets table based on the ticket ID and return true if the deletion was successful, otherwise it will return false
     public boolean cancelTicket(int ticketId) {
         String query = "DELETE FROM Tickets WHERE id = ?"; //SQL query to delete a ticket from the Tickets table based on the ticket ID
+        //The "WHERE id = ?" acts as a built in safeguard.
+        //Since 'id' is a Primary Key, this query will strictly delete at most one specific row.
+        //There is no risk of accidentally deleting all records from the Tickets table so there is no need to add a confirmation step before executing the deletion.
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, ticketId);
