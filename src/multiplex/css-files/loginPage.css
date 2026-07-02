@@ -1,17 +1,18 @@
 .root{
-    -fx-background-color:"#F07FBB";
-    -fx-font-family: "Monospace";
+    -fx-background-color:"#ffa5ab";
+    -fx-font-family: "Comic Sans MS";
 }
 
 #loginButton{
-    -fx-background-color:"#E9449C";
+    -fx-background-color:"#f9dbbd";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
 }
 
 #loginButton:hover{
     -fx-cursor: hand;
-    -fx-background-color: "#C23DBD";
+    -fx-background-color: "#FCDFC0";
+    -fx-font-family: "Comic Sans MS";
     -fx-font-weight: bold;
 }
 
