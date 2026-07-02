@@ -6,11 +6,11 @@ public class DBConnection {
     
     // Below variables are needed for getConnection method
     
-    private static String url = "jdbc:mysql://localhost:3306/multiplex"; 
+    private static final String url = "jdbc:mysql://localhost:3306/multiplex"; 
     // The creation of the url follows this format: protocol//[hosts][/database][?properties], from mysql quide
     // 3306 is for xammp
-    private static String username = "root";
-    private static String passwd = "";
+    private static final String username = "root";
+    private static final String passwd = "";
     
     public static Connection getConnection(){ 
         // method connecting sql to java code 

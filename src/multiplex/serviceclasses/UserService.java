@@ -1,22 +1,15 @@
 package multiplex.serviceclasses;
 
+import multiplex.dbconnection.DBConnection;
 import multiplex.dataclasses.User;
 import java.sql.*;
 
 public class UserService {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/multiplex";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";
 
     private Connection connection;
 
     public UserService() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-        } catch (SQLException | ClassNotFoundException e) {
-            System.out.println("Connection error: " + e.getMessage());
-        }
+        this.connection = DBConnection.getConnection(); //establishing a connection to the database using the DBConnection class
     }
 
     //Method to register a new user, this method will insert a new user into the Users table in the database and return true if the insertion was successful, otherwise it will return false

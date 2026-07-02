@@ -1,26 +1,17 @@
 package multiplex.serviceclasses;
 
 import multiplex.dataclasses.Movie;
+import multiplex.dbconnection.DBConnection;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MovieService {
-    
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/multiplex";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";
 
     private Connection connection;
 
     public MovieService() {
-        try {
-            // Φόρτωση του MySQL Driver για σιγουριά
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-        } catch (SQLException | ClassNotFoundException e) {
-            System.out.println("Σφάλμα σύνδεσης: " + e.getMessage());
-        }
+        this.connection = DBConnection.getConnection(); //establishing a connection to the database using the DBConnection class
     }
 
     //Method to search for movies, this method will search for movies in the database that match the given keyword in their title and return a list of Movie objects that match the search criteria
