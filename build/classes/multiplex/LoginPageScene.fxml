@@ -15,23 +15,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.MultiplexController">
    <children>
-      <TextField fx:id="userField" alignment="CENTER" layoutX="280.0" layoutY="284.0" prefHeight="26.0" prefWidth="164.0" promptText="Username" styleClass="textField" AnchorPane.bottomAnchor="410.40000000000003" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="284.0">
+      <TextField fx:id="userField" alignment="CENTER" layoutX="278.0" layoutY="285.0" prefHeight="26.0" prefWidth="164.0" promptText="Username" styleClass="textField" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="278.0">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></TextField>
-      <PasswordField fx:id="passField" alignment="CENTER" layoutX="278.0" layoutY="318.0" prefHeight="26.0" prefWidth="164.0" promptText="Password" styleClass="textField" AnchorPane.leftAnchor="277.6" AnchorPane.rightAnchor="279.6">
+      <PasswordField fx:id="passField" alignment="CENTER" layoutX="278.0" layoutY="319.0" prefHeight="26.0" prefWidth="164.0" promptText="Password" styleClass="textField" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="278.8">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></PasswordField>
-      <Button fx:id="loginButton" layoutX="296.0" layoutY="376.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="26.0" prefWidth="126.0" text="Log in" textAlignment="CENTER" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="297.6">
+      <Button fx:id="loginButton" layoutX="296.0" layoutY="368.0" maxHeight="26.0" maxWidth="126.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="26.0" prefWidth="126.0" text="Log in" textAlignment="CENTER" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="297.59999999999997">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></Button>
-      <Text fx:id="registerText" layoutX="253.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" textAlignment="CENTER" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="337.53125">
+      <Text fx:id="registerText" layoutX="253.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="337.53125">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></Text>
-      <Hyperlink fx:id="registerLink" layoutX="383.0" layoutY="411.0" onAction="#registerLinkClick" prefHeight="26.0" prefWidth="83.0" text="Register now!" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="253.8">
+      <Hyperlink fx:id="registerLink" layoutX="383.0" layoutY="411.0" onAction="#registerLinkClick" prefHeight="26.0" prefWidth="83.0" text="Register now!" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="253.60000000000002">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></Hyperlink>
@@ -60,17 +60,17 @@
                </stops>
             </RadialGradient>
          </textFill></Label>
-      <Label alignment="CENTER" layoutX="12.0" layoutY="630.0" prefHeight="49.0" prefWidth="694.0" text="Bananas are in fact, berries...!" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="12.0" layoutY="630.0" prefHeight="49.0" prefWidth="694.0" text="Bananas are in fact, berries...!" textAlignment="CENTER" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.600000000000023">
          <font>
             <Font name="Comic Sans MS" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="12.0" layoutY="620.0" prefHeight="26.0" prefWidth="694.0" text="Did you know?" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="12.0" layoutY="620.0" prefHeight="26.0" prefWidth="694.0" text="Did you know?" textAlignment="CENTER" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.600000000000023">
          <font>
             <Font name="Comic Sans MS" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="cinemaLogo1" alignment="CENTER" layoutX="182.0" layoutY="56.0" prefHeight="100.0" prefWidth="271.0" text="Speaking about...">
+      <Label fx:id="cinemaLogo1" alignment="CENTER" layoutX="185.0" layoutY="56.0" prefHeight="100.0" prefWidth="266.0" text="Speaking about..." AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="269.40000000000003">
          <font>
             <Font name="Comic Sans MS Bold Italic" size="24.0" />
          </font>
@@ -96,7 +96,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label fx:id="cinemaLogo112" alignment="CENTER" layoutX="153.0" layoutY="186.0" prefHeight="26.0" prefWidth="414.0" text="*the logo text shall by replaced with an anstonishing image by the glorious Vanessa">
+      <Label fx:id="cinemaLogo112" alignment="CENTER" layoutX="153.0" layoutY="186.0" prefHeight="26.0" prefWidth="414.0" text="*the logo text shall by replaced with an anstonishing image by the glorious Vanessa" AnchorPane.leftAnchor="167.2" AnchorPane.rightAnchor="169.60000000000002">
          <font>
             <Font name="Comic Sans MS Bold Italic" size="10.0" />
          </font>

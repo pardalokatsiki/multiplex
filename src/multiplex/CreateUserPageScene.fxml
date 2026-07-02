@@ -33,7 +33,7 @@
          <font>
             <Font name="Comic Sans MS" size="14.0" />
          </font></Label>
-      <Button fx:id="createAccountButton" layoutX="297.0" layoutY="427.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountClick" prefHeight="26.0" prefWidth="126.0" text="Create account" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="296.79999999999995">
+      <Button fx:id="createAccountButton" layoutX="297.0" layoutY="427.0" maxHeight="26.0" maxWidth="126.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountClick" prefHeight="26.0" prefWidth="126.0" text="Create account" textAlignment="CENTER" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="296.79999999999995">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></Button>
