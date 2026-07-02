@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MovieService",
+            "request": "launch",
+            "mainClass": "multiplex.serviceclasses.MovieService",
+            "projectName": "multiplex_408d0b0d"
+        },
+        {
+            "type": "java",
             "name": "Launch View",
             "request": "launch",
             "mainClass": "multiplex.MultiplexView",
