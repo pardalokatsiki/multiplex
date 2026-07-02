@@ -16,104 +16,120 @@
    <children>
       <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="638.0" prefWidth="694.0" spacing="110.0">
+            <VBox alignment="CENTER" prefHeight="783.0" prefWidth="1080.0" spacing="100.0">
                <children>
-                  <VBox alignment="CENTER" prefWidth="720.0">
+                  <VBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="1080.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="51.0" prefWidth="597.0" text="Almost there!">
-                           <font>
-                              <Font name="Comic Sans MS" size="36.0" />
-                           </font>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" spread="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.6000000238418579" blue="0.6066666841506958" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                        </Label>
-                        <Label alignment="CENTER" text="We will be happy if you join our team! :-)" textAlignment="CENTER">
-                           <font>
-                              <Font name="Comic Sans MS" size="14.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets top="40.0" />
-                     </VBox.margin>
-                  </VBox>
-                  <VBox alignment="CENTER" spacing="8.0">
-                     <children>
-                        <HBox alignment="CENTER">
-                           <children>
-                              <Label prefHeight="22.0" prefWidth="82.0" text="Username:">
-                                 <font>
-                                    <Font name="Comic Sans MS" size="12.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="createUsername" alignment="CENTER" prefHeight="26.0" prefWidth="164.0" promptText="Enter your username">
-                                 <font>
-                                    <Font name="Comic Sans MS Italic" size="12.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER">
-                           <children>
-                              <Label prefHeight="22.0" prefWidth="82.0" text="E-mail: ">
-                                 <font>
-                                    <Font name="Comic Sans MS" size="12.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="createEmail" alignment="CENTER" prefHeight="26.0" prefWidth="164.0" promptText="Enter your e-mail">
-                                 <font>
-                                    <Font name="Comic Sans MS Italic" size="12.0" />
-                                 </font>
-                              </TextField>
-                           </children>
+                        <Button fx:id="backToLoginButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="81.0" text="Go back" textAlignment="CENTER">
                            <VBox.margin>
-                              <Insets />
+                              <Insets right="10.0" />
                            </VBox.margin>
-                        </HBox>
-                        <HBox alignment="CENTER">
-                           <children>
-                              <Label prefHeight="22.0" prefWidth="82.0" text="Password: ">
-                                 <font>
-                                    <Font name="Comic Sans MS" size="12.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="createPass" alignment="CENTER" prefHeight="26.0" prefWidth="164.0" promptText="Enter your password">
-                                 <font>
-                                    <Font name="Comic Sans MS Italic" size="12.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <Button fx:id="createAccountButton" maxHeight="26.0" maxWidth="126.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountClick" prefHeight="26.0" prefWidth="126.0" text="Create account" textAlignment="CENTER">
                            <font>
                               <Font name="Comic Sans MS" size="12.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
                         </Button>
                      </children>
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER">
+                  <VBox prefHeight="546.0" prefWidth="1080.0" spacing="129.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="11.0" prefWidth="694.0" text="Did you know?" textAlignment="CENTER">
-                           <font>
-                              <Font name="Comic Sans MS" size="14.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" prefHeight="10.0" prefWidth="694.0" text="Strawberries have a higher concentration of vitamin C compared to oranges!" textAlignment="CENTER">
-                           <font>
-                              <Font name="Comic Sans MS" size="14.0" />
-                           </font>
-                        </Label>
+                        <VBox alignment="CENTER" prefHeight="41.0" prefWidth="1080.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="34.0" prefWidth="598.0" text="Almost there!">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="36.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" spread="1.0">
+                                       <color>
+                                          <Color red="1.0" green="0.6000000238418579" blue="0.6066666841506958" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="10.0" prefWidth="264.0" text="We will be happy if you join our team! :-)" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="8.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="4.0" prefWidth="1080.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="82.0" text="Username:">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="createUsername" alignment="CENTER" prefHeight="26.0" prefWidth="164.0" promptText="Enter your username">
+                                       <font>
+                                          <Font name="Comic Sans MS Italic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="4.0" prefWidth="1080.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="82.0" text="E-mail: ">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="createEmail" alignment="CENTER" prefHeight="26.0" prefWidth="164.0" promptText="Enter your e-mail">
+                                       <font>
+                                          <Font name="Comic Sans MS Italic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1080.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="82.0" text="Password: ">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="createPass" alignment="CENTER" prefHeight="26.0" prefWidth="164.0" promptText="Enter your password">
+                                       <font>
+                                          <Font name="Comic Sans MS Italic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="createAccountButton" maxHeight="26.0" maxWidth="126.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountClick" prefHeight="26.0" prefWidth="126.0" text="Create account" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="3.0" prefWidth="694.0" text="Did you know?" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="10.0" prefWidth="694.0" text="Strawberries have a higher concentration of vitamin C compared to oranges!" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
                      </children>
                      <VBox.margin>
-                        <Insets top="80.0" />
+                        <Insets bottom="58.0" />
                      </VBox.margin>
                   </VBox>
                </children>
