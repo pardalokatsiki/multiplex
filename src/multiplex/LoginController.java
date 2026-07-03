@@ -23,9 +23,12 @@ public class LoginController {
 
     @FXML
     void loginButtonClick(ActionEvent event) {
-        String text = userField.getText();
+        String name = userField.getText();
         String pwd = passField.getText();
-        if (!text.isEmpty() && !pwd.isEmpty()) {
+        // Username πεδίο πρέπει να μην είναι κενό και το πολύ 18 χαρακτήρες
+        // Password πεδίο πρέπει να μην είναι κενό και το λιγότερο 8 χαρακτήρες
+        if ( (!name.isEmpty() && name.length() <= 18) 
+            && (!pwd.isEmpty() && pwd.length() >= 8)) {
             // Move to Browse Page Scene
             MultiplexController.switchScene(ViewScenes.BROWSE);
         }
