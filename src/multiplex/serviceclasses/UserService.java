@@ -76,7 +76,7 @@ public class UserService {
            
         String query = "SELECT * FROM Users WHERE username = ? AND passwd = ?"; //SQL query to select a user from the Users table based on the username and password
         
-        try ( Connection con = DBConnection.getConnection(); PreparedStatement statement = connection.prepareStatement(query)) {
+        try ( Connection connection = DBConnection.getConnection(); PreparedStatement statement = connection.prepareStatement(query)) {
             
             
             statement.setString(1, username);
@@ -86,15 +86,12 @@ public class UserService {
             
             //check if user  login data matches the db data
     
-            if(resultSet.next()){
-                System.out.println("User: " + username + " is logged in.");
-            }else{
-                System.out.println("Login failed.Incorrect username or password");
-            }
+           
             
             
             
             if (resultSet.next()) { //if a user is found, create and return a User object
+                System.out.println("User: " + username + " is logged in.");
                 loggedInUser=new User(
                     resultSet.getInt("id"),
                     resultSet.getString("username"),
@@ -103,6 +100,8 @@ public class UserService {
                 );
 
                 return loggedInUser;
+            }else{
+                System.out.println("Login failed.Incorrect username or password");
             }
             
         } catch (SQLException e) {
