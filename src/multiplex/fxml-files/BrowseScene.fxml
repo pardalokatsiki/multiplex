@@ -20,7 +20,7 @@
          <left>
             <VBox prefHeight="200.0" prefWidth="360.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="moviePoster" fitHeight="340.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="moviePoster" fitHeight="289.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets left="50.0" top="50.0" />
                      </VBox.margin>
@@ -30,7 +30,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="movieDesc" alignment="CENTER" prefHeight="132.0" prefWidth="374.0" text="Description here!!!!!" textAlignment="JUSTIFY">
+                  <Label fx:id="movieDesc" alignment="CENTER" prefHeight="206.0" prefWidth="360.0" text="Description here!!!!!" textAlignment="JUSTIFY" wrapText="true">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -57,7 +57,7 @@
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Label fx:id="userName" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="210.0" text="user">
+                  <Label fx:id="userName" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="199.0" text="user">
                      <font>
                         <Font size="24.0" />
                      </font>
