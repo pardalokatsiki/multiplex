@@ -87,7 +87,7 @@
                               </Button>
                            </children>
                            <HBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
+                              <Insets bottom="10.0" top="28.0" />
                            </HBox.margin>
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
