@@ -69,28 +69,6 @@ public class MovieService {
         return moviesList;
     }
 
-    // --- ΠΡΟΣΩΡΙΝΟΣ ΚΩΔΙΚΑΣ ΓΙΑ ΔΟΚΙΜΗ (TESTING) ---
-    public static void main(String[] args) {
-        System.out.println("--- Έναρξη δοκιμής Backend ---");
-
-        // 1. Δημιουργία του Service
-        MovieService service = new MovieService();
-
-        // 2. Εκτέλεση δοκιμαστικής αναζήτησης
-        System.out.println("Γίνεται αναζήτηση στη βάση για ταινίες που περιέχουν το 'a'...");
-        List<Movie> results = service.searchMovies("a");
-
-        // 3. Εμφάνιση αποτελεσμάτων
-        if (results.isEmpty()) {
-            System.out.println("Δεν βρέθηκαν αποτελέσματα ή η βάση είναι άδεια.");
-        } else {
-            System.out.println("Βρέθηκαν " + results.size() + " ταινίες:");
-            for (Movie m : results) {
-                System.out.println("- " + m.getTitle() + " | Προβολή: " + m.getShowDay() + " " + m.getShowTime());
-            }
-        }
-        System.out.println("--- Τέλος δοκιμής ---");
-    }
 
 }
 
