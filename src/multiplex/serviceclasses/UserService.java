@@ -76,19 +76,12 @@ public class UserService {
            
         String query = "SELECT * FROM Users WHERE username = ? AND passwd = ?"; //SQL query to select a user from the Users table based on the username and password
         
-        try ( Connection connection = DBConnection.getConnection(); PreparedStatement statement = connection.prepareStatement(query)) {
-            
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
             
             statement.setString(1, username);
             statement.setString(2, passwd);
             
             ResultSet resultSet = statement.executeQuery();
-            
-            //check if user  login data matches the db data
-    
-           
-            
-            
             
             if (resultSet.next()) { //if a user is found, create and return a User object
                 System.out.println("User: " + username + " is logged in.");
