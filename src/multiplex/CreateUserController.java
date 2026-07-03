@@ -7,6 +7,9 @@ import javafx.scene.control.TextField;
 
 public class CreateUserController {
     @FXML
+    private Button backToLoginButton;
+
+    @FXML
     private Button createAccountButton;
 
     @FXML
@@ -27,6 +30,11 @@ public class CreateUserController {
         //TODO Add SQL query to save user credentials
         
         //Move to Login Page Scene
+        MultiplexController.switchScene(ViewScenes.LOGIN);
+    }
+
+    @FXML
+    void goBackButtonClick(ActionEvent goBack) {
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 }

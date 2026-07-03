@@ -20,7 +20,7 @@
                <children>
                   <VBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="1080.0">
                      <children>
-                        <Button fx:id="backToLoginButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="81.0" text="Go back" textAlignment="CENTER">
+                        <Button fx:id="backToLoginButton" mnemonicParsing="false" onAction="#goBackButtonClick" prefHeight="50.0" prefWidth="81.0" text="Go back" textAlignment="CENTER">
                            <VBox.margin>
                               <Insets right="10.0" />
                            </VBox.margin>
