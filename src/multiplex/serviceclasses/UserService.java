@@ -8,8 +8,21 @@ public class UserService {
 
     private Connection connection;
 
+    private static User loggedInUser = null;
+
     public UserService() {
         this.connection = DBConnection.getConnection(); //establishing a connection to the database using the DBConnection class
+    }
+
+    //Returns the logged in user
+    public static User getLoggedInUser(){
+        return loggedInUser;
+    }
+
+    //Logout and memory clean out
+    public static void logout() {
+        loggedInUser=null;
+        System.out.println("User logged out succesfully.");
     }
 
     //Method to register a new user, this method will insert a new user into the Users table in the database and return true if the insertion was successful, otherwise it will return false
@@ -40,12 +53,14 @@ public class UserService {
             
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) { //if a user is found, create and return a User object
-                return new User(
+                loggedInUser=new User(
                     resultSet.getInt("id"),
                     resultSet.getString("username"),
                     resultSet.getString("password"),
                     resultSet.getString("email")
                 );
+
+                return loggedInUser;
             }
             
         } catch (SQLException e) {
