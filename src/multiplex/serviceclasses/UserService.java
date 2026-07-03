@@ -4,6 +4,8 @@ import multiplex.dbconnection.DBConnection;
 import multiplex.dataclasses.User;
 import java.sql.*;
 
+
+
 public class UserService {
 
     private Connection connection;
@@ -26,8 +28,30 @@ public class UserService {
     }
 
     //Method to register a new user, this method will insert a new user into the Users table in the database and return true if the insertion was successful, otherwise it will return false
-    public boolean registerUser(String username, String password, String email) {
+    public String registerUser(String username, String password, String email) {
+        
+       
+        // check user data 
+        
+        if(username == null || username.trim().length() <10 ){
+            return  "Invalid Username format.";
+        }
+        
+        // password must contain at least one non-capital letter, capital one, symbol 
+        String passwdRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
+        if(password == null || !password.matches(passwdRegex)){
+            return "Invalid password format.";
+        }
+        
+        if(email == null || !email.contains("@")){
+            return "Inavlid email format.";
+        }
+         
+        
+        
         String query = "INSERT INTO Users (username, password, email) VALUES (?, ?, ?)"; //SQL query to insert a new user into the Users table, using ? to prevent SQL injection
+        
+        // Annamaria υπάρχει λάθος εδω πρ΄έπει νατο αλλάξουμε να κανει ελεγχο στο rows affected kai na kanei return string 
         
         try (PreparedStatement statement = connection.prepareStatement(query)) { //using try-with-resources to automatically close the PreparedStatement
             statement.setString(1, username);
@@ -40,7 +64,8 @@ public class UserService {
         } catch (SQLException e) {
             System.out.println("Registration error: " + e.getMessage());
             return false;
-        }
+        } 
+        
     }
 
     //Method to login, this method will check if the provided username and password match a user in the Users table and return a User object if successful, otherwise it will return null
