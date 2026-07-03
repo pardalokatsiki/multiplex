@@ -1,4 +1,4 @@
-package multiplex;
+package multiplex.dataclasses;
 
 public class User {
     private String name;

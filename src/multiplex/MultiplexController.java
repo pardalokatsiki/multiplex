@@ -1,93 +1,34 @@
 package multiplex;
 
-import java.io.IOException;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import java.util.Objects;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
-import javafx.scene.text.Text;
 
 public class MultiplexController {
-    @FXML
-    public void loginButtonClick(ActionEvent login) {
-        String text = userField.getText();
-        String pwd = passField.getText();
-        if(!text.isEmpty() && !pwd.isEmpty())
-            System.out.println("Looking for user: " + text + " with password: " + pwd);
-    }
-    
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-   
-    @FXML
-    public void registerLinkClick(ActionEvent event) throws IOException {
-        //Move to Register Page Scene
-        root = FXMLLoader.load(getClass().getResource("CreateUserPageScene.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
 
-        String css = this.getClass().getResource("css-files/registerPage.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
+    private static Stage stage;
+
+    public static void setStage(Stage primaryStage) {
+        stage = primaryStage;
     }
 
-    @FXML
-    public void createAccountClick(ActionEvent event) throws IOException {
-        String username = createUsername.getText();
-        String password = createPass.getText();
-        String email = createEmail.getText();
-        
-        //TODO Add SQL query to save user credentials
-        
-        //Move to Login Page Scene
-        root = FXMLLoader.load(getClass().getResource("LoginPageScene.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+    public static void switchScene(ViewScenes view) {
+        try {
+            FXMLLoader loader = new FXMLLoader(MultiplexController.class.getResource(view.getFxmlFile()));
 
-        String css = this.getClass().getResource("css-files/loginPage.css").toExternalForm();
-        scene.getStylesheets().add(css);
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
 
-        stage.setScene(scene);
-        stage.show();
+            if (view.getCssFile() != null)
+                scene.getStylesheets().add(Objects.requireNonNull(MultiplexController.class.getResource(view.getCssFile()).toExternalForm()));
+            stage.setScene(scene);
+            stage.show();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not load " + view, e);
+        }
     }
-
-    @FXML
-    private Label cinemaLogo;
-
-    @FXML
-    private Button loginButton;
-
-    @FXML
-    private PasswordField passField;
-
-    @FXML
-    private Hyperlink registerLink;
-
-    @FXML
-    private Text registerText;
-
-    @FXML
-    private TextField userField;
-
-    @FXML
-    private Button createAccountButton;
-    
-    @FXML
-    private TextField createUsername;
-    
-    @FXML
-    private TextField createEmail;
-    
-    @FXML
-    private TextField createPass;
 }

@@ -1,4 +1,4 @@
-package multiplex;
+package multiplex.dataclasses;
 
 public class Movie {
     private String title;
