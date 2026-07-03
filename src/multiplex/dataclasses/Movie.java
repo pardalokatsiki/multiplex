@@ -6,17 +6,17 @@ public class Movie {
     private String title; //Title of the movie
     private int duration_min; //Duration of the movie in minutes
     private String info; //Information about the movie
-    private String showDate; //Date for when the movie is shown
+    private String showDay; //Day for when the movie is shown
     private String showTime; //Time for when the movie is shown
     
     //Constructor for the Movie class
-    public Movie(int id, String title, int duration_min, String info,String showDate,String showTime){
+    public Movie(int id, String title, int duration_min, String info,String showDay,String showTime){
         
         this.id = id;
         this.title = title;
         this.duration_min = duration_min;
         this.info = info;
-        this.showDate = showDate;
+        this.showDay = showDay;
         this.showTime = showTime;
         
     }
@@ -38,8 +38,8 @@ public class Movie {
         return info;
     }
 
-     public String getShowDate() {
-        return showDate;
+     public String getShowDay() {
+        return showDay;
     }
 
     public String getShowTime() {
@@ -63,8 +63,8 @@ public class Movie {
         this.info = info;
     }
 
-    public void setShowDate(String showDate) {
-        this.showDate = showDate;
+    public void setShowDay(String showDay) {
+        this.showDay = showDay;
     }
 
     public void setShowTime(String showTime) {

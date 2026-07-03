@@ -28,7 +28,7 @@ public class UserService {
     }
 
     //Method to register a new user, this method will insert a new user into the Users table in the database and return true if the insertion was successful, otherwise it will return false
-    public String registerUser(String username, String password, String email) {
+    public String registerUser(String username, String passwd, String email) {
         
        
         // check user data 
@@ -39,7 +39,7 @@ public class UserService {
         
         // password must contain at least one non-capital letter, capital one, symbol 
         String passwdRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
-        if(password == null || !password.matches(passwdRegex)){
+        if(passwd == null || !passwd.matches(passwdRegex)){
             return "Invalid password format.";
         }
         
@@ -55,7 +55,7 @@ public class UserService {
         
         try (PreparedStatement statement = connection.prepareStatement(query)) { //using try-with-resources to automatically close the PreparedStatement
             statement.setString(1, username);
-            statement.setString(2, password);
+            statement.setString(2, passwd);
             statement.setString(3, email);
             
             int rowsAffected = statement.executeUpdate(); //execute the update and get the number of rows affected
@@ -69,12 +69,12 @@ public class UserService {
     }
 
     //Method to login, this method will check if the provided username and password match a user in the Users table and return a User object if successful, otherwise it will return null
-    public User loginUser(String username, String password) {
+    public User loginUser(String username, String passwd) {
         String query = "SELECT * FROM Users WHERE username = ? AND password = ?"; //SQL query to select a user from the Users table based on the username and password
         
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, username);
-            statement.setString(2, password);
+            statement.setString(2, passwd);
             
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) { //if a user is found, create and return a User object
