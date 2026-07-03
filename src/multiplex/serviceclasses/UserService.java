@@ -51,19 +51,22 @@ public class UserService {
         
         String query = "INSERT INTO Users (username, password, email) VALUES (?, ?, ?)"; //SQL query to insert a new user into the Users table, using ? to prevent SQL injection
         
-        // Annamaria υπάρχει λάθος εδω πρ΄έπει νατο αλλάξουμε να κανει ελεγχο στο rows affected kai na kanei return string 
-        
         try (PreparedStatement statement = connection.prepareStatement(query)) { //using try-with-resources to automatically close the PreparedStatement
             statement.setString(1, username);
             statement.setString(2, passwd);
             statement.setString(3, email);
             
             int rowsAffected = statement.executeUpdate(); //execute the update and get the number of rows affected
-            return rowsAffected > 0; //return true if at least one row was affected, the user was successfully registered
+            if(rowsAffected > 0){   //return true if at least one row was affected, the user was successfully registered
+                return "User created.";
+            }else{
+                return "User craetion on DB eroor";
+            }
+             
             
         } catch (SQLException e) {
             System.out.println("Registration error: " + e.getMessage());
-            return false;
+            return "DB error";
         } 
         
     }
