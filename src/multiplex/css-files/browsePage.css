@@ -61,3 +61,13 @@
 .transparent{
     -fx-background-color: rgba(0,0,0,0);
 }
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #f9dbbd;
+}
