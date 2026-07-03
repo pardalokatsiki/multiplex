@@ -86,7 +86,7 @@ public class MovieService {
         } else {
             System.out.println("Βρέθηκαν " + results.size() + " ταινίες:");
             for (Movie m : results) {
-                System.out.println("- " + m.getTitle() + " | Προβολή: " + m.getShowDate() + " " + m.getShowTime());
+                System.out.println("- " + m.getTitle() + " | Προβολή: " + m.getShowDay() + " " + m.getShowTime());
             }
         }
         System.out.println("--- Τέλος δοκιμής ---");

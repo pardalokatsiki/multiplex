@@ -6,6 +6,13 @@
             "name": "MovieService",
             "request": "launch",
             "mainClass": "multiplex.serviceclasses.MovieService",
+            "projectName": "multiplex_259263ac"
+        },
+        {
+            "type": "java",
+            "name": "MovieService",
+            "request": "launch",
+            "mainClass": "multiplex.serviceclasses.MovieService",
             "projectName": "multiplex_408d0b0d"
         },
         {
