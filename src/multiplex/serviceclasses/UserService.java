@@ -49,7 +49,7 @@ public class UserService {
          
         
         
-        String query = "INSERT INTO Users (username, password, email) VALUES (?, ?, ?)"; //SQL query to insert a new user into the Users table, using ? to prevent SQL injection
+        String query = "INSERT INTO Users (username, passwd, email) VALUES (?, ?, ?)"; //SQL query to insert a new user into the Users table, using ? to prevent SQL injection
         
         try (PreparedStatement statement = connection.prepareStatement(query)) { //using try-with-resources to automatically close the PreparedStatement
             statement.setString(1, username);
@@ -73,7 +73,7 @@ public class UserService {
 
     //Method to login, this method will check if the provided username and password match a user in the Users table and return a User object if successful, otherwise it will return null
     public User loginUser(String username, String passwd) {
-        String query = "SELECT * FROM Users WHERE username = ? AND password = ?"; //SQL query to select a user from the Users table based on the username and password
+        String query = "SELECT * FROM Users WHERE username = ? AND passwd = ?"; //SQL query to select a user from the Users table based on the username and password
         
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, username);
@@ -84,7 +84,7 @@ public class UserService {
                 loggedInUser=new User(
                     resultSet.getInt("id"),
                     resultSet.getString("username"),
-                    resultSet.getString("password"),
+                    resultSet.getString("passwd"),
                     resultSet.getString("email")
                 );
 
@@ -95,5 +95,50 @@ public class UserService {
             System.out.println("Authentication error: " + e.getMessage());
         }
         return null; //return null if the user is not found or an error occurs
+    }
+
+    // --- TEMPORARY TEST CODE ---
+    public static void main(String[] args) {
+        System.out.println("--- Starting UserService Test ---");
+
+        UserService userService = new UserService();
+
+        // 1. Test Registration with INVALID data
+        System.out.println("\n[1] Testing Invalid Registration...");
+        String badReg1 = userService.registerUser("short", "weak", "bademail");
+        System.out.println("Result (Short Username): " + badReg1);
+        
+        String badReg2 = userService.registerUser("ValidUser123", "weak", "test@test.com");
+        System.out.println("Result (Weak Password): " + badReg2);
+
+        // 2. Test Registration with VALID data
+        System.out.println("\n[2] Testing Valid Registration...");
+        // NOTE: If you run this twice, change the username, otherwise the DB will reject it as a duplicate!
+        String validUser = "SuperMario123"; 
+        String validPass = "Str0ngP@ss!";
+        String validEmail = "mario@nintendo.com";
+        
+        String goodReg = userService.registerUser(validUser, validPass, validEmail);
+        System.out.println("Result (Valid Data): " + goodReg);
+
+        // 3. Test Login
+        System.out.println("\n[3] Testing Login...");
+        User user = userService.loginUser(validUser, validPass);
+        
+        if (user != null) {
+            System.out.println("Login Successful! Welcome, " + user.getUsername());
+            System.out.println("Active Session User: " + UserService.getLoggedInUser().getUsername());
+        } else {
+            System.out.println("Login Failed. Invalid credentials.");
+        }
+
+        // 4. Test Logout
+        System.out.println("\n[4] Testing Logout...");
+        UserService.logout();
+        if (UserService.getLoggedInUser() == null) {
+            System.out.println("Session cleared successfully.");
+        }
+        
+        System.out.println("\n--- Test Complete ---");
     }
 }

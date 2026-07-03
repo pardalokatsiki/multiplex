@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TicketService",
+            "request": "launch",
+            "mainClass": "multiplex.serviceclasses.TicketService",
+            "projectName": "multiplex_259263ac"
+        },
+        {
+            "type": "java",
+            "name": "UserService",
+            "request": "launch",
+            "mainClass": "multiplex.serviceclasses.UserService",
+            "projectName": "multiplex_259263ac"
+        },
+        {
+            "type": "java",
             "name": "MovieService",
             "request": "launch",
             "mainClass": "multiplex.serviceclasses.MovieService",

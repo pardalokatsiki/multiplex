@@ -48,4 +48,45 @@ public class TicketService {
             return false;
         }
     }
+
+    // --- TEMPORARY TEST CODE ---
+    public static void main(String[] args) {
+        System.out.println("--- Starting TicketService Test ---");
+
+        TicketService ticketService = new TicketService();
+
+        // 1. Test Booking a Ticket
+        System.out.println("\n[1] Testing Ticket Booking...");
+        // Using existing User ID (1 = Mary) and Movie ID (12 = The Godfather)
+        boolean bookSuccess = ticketService.bookTicket("VIP-1", 15.00, 12, 1);
+        
+        if (bookSuccess) {
+            System.out.println("Result: SUCCESS! Ticket booked for Seat VIP-1.");
+        } else {
+            System.out.println("Result: FAILED to book ticket. (Check database connection or foreign keys).");
+        }
+
+        // 2. Test Canceling an Existing Ticket
+        System.out.println("\n[2] Testing Ticket Cancellation (Existing Ticket)...");
+        // From our SQL script, we know ticket ID 2 (Mary's original ticket) exists.
+        boolean cancelSuccess = ticketService.cancelTicket(2);
+        
+        if (cancelSuccess) {
+            System.out.println("Result: SUCCESS! Ticket ID 2 was successfully canceled/deleted.");
+        } else {
+            System.out.println("Result: FAILED. Ticket ID 2 might not exist (maybe you already deleted it!).");
+        }
+
+        // 3. Test Canceling a Non-Existent Ticket (Edge Case)
+        System.out.println("\n[3] Testing Ticket Cancellation (Fake Ticket)...");
+        boolean cancelFail = ticketService.cancelTicket(9999);
+        
+        if (!cancelFail) {
+            System.out.println("Result: SUCCESS (Expected). Ticket ID 9999 does not exist, so the method correctly returned false.");
+        } else {
+            System.out.println("Result: ERROR! It deleted something that shouldn't exist!");
+        }
+
+        System.out.println("\n--- Test Complete ---");
+    }
 }
