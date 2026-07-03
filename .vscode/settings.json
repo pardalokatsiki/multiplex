@@ -13,6 +13,8 @@
         "${PATH_TO_FX}/javafx.fxml.jar",
         "${PATH_TO_FX}/javafx.controls.jar",
         "${PATH_TO_FX}/javafx.base.jar",
-        "${PATH_TO_FX}/javafx-swt.jar"
+        "${PATH_TO_FX}/javafx-swt.jar",
+        "/mnt/c/Users/anmal/Downloads/mysql-connector-j-9.7.0/mysql-connector-j-9.7.0/mysql-connector-j-9.7.0.jar",
+        "c:\\Users\\anmal\\Downloads\\mysql-connector-j-9.7.0\\mysql-connector-j-9.7.0\\mysql-connector-j-9.7.0.jar"
     ]
 }
