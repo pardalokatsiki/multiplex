@@ -1,5 +1,5 @@
 .root{
-    -fx-background-color:"#f9dbbd";
+    -fx-background-color:"#008000";
 }
 
 .color0{
@@ -23,23 +23,23 @@
 }
 
 #logoutButton{
-    -fx-background-color:"#6e6e6e";
+    -fx-background-color:"#da627d";
     -fx-background-radius: 100px;
 }
 
 #logoutButton:hover{
     -fx-cursor: hand;
-    -fx-background-color: "#4a4a4a";
+    -fx-background-color: "#a53860";
 }
 
 #ticketButton{
-    -fx-background-color:"#e6959a";
+    -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
 }
 
 #ticketButton:hover{
     -fx-cursor: hand;
-    -fx-background-color: "#c7af97";
+    -fx-background-color: "#cc8489";
 
 }
 
@@ -50,7 +50,7 @@
 
 #searchButton:hover{
     -fx-cursor: hand;
-    -fx-background-color: "#c7af97";
+    -fx-background-color: "#cc8489";
 }
 
 .searchbox{
