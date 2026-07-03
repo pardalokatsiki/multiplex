@@ -56,7 +56,7 @@
          <top>
             <HBox alignment="CENTER" prefHeight="45.0" prefWidth="1080.0" spacing="25.0" styleClass="color4" stylesheets="@../css-files/browsePage.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="43.0" prefWidth="169.0" text="Logout" textFill="#f9dbbd">
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="43.0" prefWidth="169.0" text="Logout" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>

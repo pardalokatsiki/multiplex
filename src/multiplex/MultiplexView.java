@@ -12,6 +12,7 @@ public class MultiplexView extends Application {
         // Set stage Login Page as primaryStage
         MultiplexController.setStage(primaryStage);
         primaryStage.setTitle("Multiplex");
+        primaryStage.setResizable(false);
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 }
