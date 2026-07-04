@@ -2,7 +2,6 @@ package multiplex;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -48,6 +47,12 @@ public class BrowseController {
         // Start MovieService and get all movies from the database
         MovieService service = new MovieService();
         movies = service.getAllMovies();
+        // TODO: Add code for movie posters
+    }
+
+    @FXML
+    public void setChosenMovie() {
+        
     }
 
     @FXML
