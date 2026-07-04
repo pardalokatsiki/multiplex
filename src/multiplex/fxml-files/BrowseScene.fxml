@@ -5,71 +5,56 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.BrowseController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../css-files/browsePage.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.BrowseController">
    <children>
-      <BorderPane layoutX="94.0" layoutY="23.0" prefHeight="660.0" prefWidth="818.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <VBox prefHeight="200.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" layoutX="47.0" layoutY="17.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="360.0">
                <children>
-                  <ImageView fx:id="moviePoster" fitHeight="340.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="50.0" top="50.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Label fx:id="movieTitle" alignment="CENTER" prefHeight="54.0" prefWidth="368.0" text="Title">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="movieDesc" alignment="CENTER" prefHeight="132.0" prefWidth="374.0" text="Description here!!!!!" textAlignment="JUSTIFY">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="ticketButton" alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.0" text="I want a ticket!">
-                     <VBox.margin>
-                        <Insets left="100.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </left>
-         <top>
-            <HBox prefHeight="59.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="43.0" prefWidth="150.0" text="Logout">
-                     <HBox.margin>
-                        <Insets left="10.0" top="10.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-                  <Label fx:id="userName" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="210.0" text="user">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="CENTER" prefHeight="59.0" prefWidth="654.0" spacing="10.0">
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" styleClass="color4">
                      <children>
-                        <TextField alignment="CENTER" prefHeight="46.0" prefWidth="461.0">
-                           <HBox.margin>
-                              <Insets left="70.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Search">
+                        <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="40.0" prefWidth="120.0" text="Logout" textFill="#450920">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="userName" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="* Username Here *" textFill="#da627d">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="100.0" spacing="5.0" styleClass="color3">
+                     <children>
+                        <Label fx:id="movieTitle" alignment="CENTER" prefHeight="50.0" prefWidth="360.0" text="* Movie Title *" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="moviePoster" fitHeight="313.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ImagesGoHere/asdf.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="movieDesc" alignment="CENTER" prefHeight="226.0" prefWidth="340.0" text="*Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie *" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" styleClass="color3" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="ticketButton" alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.0" text="I want a ticket!" textFill="#450920">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -77,30 +62,47 @@
                      </children>
                   </HBox>
                </children>
-            </HBox>
-         </top>
-         <center>
-            <VBox prefHeight="606.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="720.0" styleClass="color0" HBox.hgrow="ALWAYS">
                <children>
-                  <ScrollPane prefHeight="664.0" prefWidth="688.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="722.0">
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="720.0" styleClass="color0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="444.0" styleClass="searchbox">
                            <children>
-                              <GridPane fx:id="grid" layoutX="28.0" layoutY="38.0" prefHeight="6.0" prefWidth="5.0">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                              </GridPane>
+                              <TextField alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="transparent" stylesheets="@../css-files/browsePage.css">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Italic" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="120.0" text="Search" textFill="#f9dbbd">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
                            </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="28.0" />
+                           </HBox.margin>
                            <padding>
-                              <Insets top="10.0" />
+                              <Insets bottom="10.0" top="10.0" />
                            </padding>
-                        </AnchorPane>
-                    </content>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #FEBD0;" stylesheets="@../css-files/browsePage.css" VBox.vgrow="ALWAYS">
+                     <content>
+                        <TilePane fx:id="moviesContainer" hgap="15.0" style="-fx-background-color: transparent;" vgap="15.0" />
+                     </content>
                   </ScrollPane>
                </children>
             </VBox>
-         </center>
-      </BorderPane>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
