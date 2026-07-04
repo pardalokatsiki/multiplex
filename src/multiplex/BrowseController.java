@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import multiplex.dataclasses.User;
 
 public class BrowseController {
     @FXML
@@ -31,6 +32,12 @@ public class BrowseController {
 
     @FXML
     private Label userName;
+
+    @FXML
+    public void initialize() {
+        User user = Session.getCurrentUser();
+        userName.setText(user.getUsername());
+    }
 
     @FXML
     public  void logoutButtonClick(ActionEvent logout) {

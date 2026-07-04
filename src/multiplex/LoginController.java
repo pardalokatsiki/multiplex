@@ -45,12 +45,13 @@ public class LoginController {
 
             if (user != null)
                 // Move to Browse Page Scene
+                Session.setCurrentUser(user);
                 MultiplexController.switchScene(ViewScenes.BROWSE);
             // user = null
             errorLabel.setText("Login failed. Username With That Password Not Found\n");
         } else {
             errorLabel.setText("Username Must Be 1-18 Characters Long.\n" +
-                    "Password Must Be At Least 8 Characters Long.");
+            "Password Must Be At Least 8 Characters Long.");
         }
     }
 
