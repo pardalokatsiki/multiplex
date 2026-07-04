@@ -32,12 +32,19 @@
     -fx-background-color: "#a53860";
 }
 
-#ticketButton{
+#confirmButton1, #backButton1{
     -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
     -fx-background-radius: 100px;
 }
 
-#ticketButton:hover{
+#confirmButton1:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+#backButton1:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
 
@@ -60,14 +67,4 @@
 
 .transparent{
     -fx-background-color: rgba(0,0,0,0);
-}
-
-.my-scroll-pane {
-    -fx-background-color: transparent;
-    -fx-background-insets: 0;
-    -fx-padding: 0;
-}
-
-.my-scroll-pane > .viewport {
-    -fx-background-color: #f9dbbd;
 }
