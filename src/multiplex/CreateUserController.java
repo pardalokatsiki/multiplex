@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+import multiplex.serviceclasses.UserService;
 
 public class CreateUserController {
     @FXML
@@ -21,22 +23,28 @@ public class CreateUserController {
     @FXML
     private TextField createUsername;
 
+    @FXML 
+    private Label errorLabel;   
+
     @FXML
     void createAccountClick(ActionEvent event) {
         String username = createUsername.getText();
         String password = createPass.getText();
         String email = createEmail.getText();
         
-        //TODO Add SQL query to save user credentials
+        // Register user in database
+        UserService service = new UserService();
+        String message = service.registerUser(username, password, email);
         
-        // Username πεδίο πρέπει να μην είναι κενό και το πολύ 18 χαρακτήρες
-        // Password πεδίο πρέπει να μην είναι κενό και το λιγότερο 8 χαρακτήρες
-        // Email πεδίο πρέπει να περιέχει το σύμβολο @
-        if ( (!username.isEmpty() && password.length() <= 18) 
-            && (!password.isEmpty() && password.length() >= 8)
-            && (!email.isEmpty() && email.length() >= 8 && email.contains("@")) )
-        //Move to Login Page Scene
-        MultiplexController.switchScene(ViewScenes.LOGIN);
+        if(message.equals("User created.")) {
+            //Move to Login Page Scene
+            MultiplexController.switchScene(ViewScenes.LOGIN);
+        } else {
+            // Show error message if there are problems in the input fields 
+            // TODO fix errorLabel not showing the entire text
+            errorLabel.setText(message);
+        }
+
     }
 
     @FXML
