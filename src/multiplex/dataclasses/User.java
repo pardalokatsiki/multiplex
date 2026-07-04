@@ -1,26 +1,55 @@
 package multiplex.dataclasses;
 
 public class User {
-    private String name;
-    private String password;
-    private String discountStatus;
+     
+    private int id; //Unique identifier for the user
+    private String username; //Username of the user
+    private String passwd; //Password of the user
+    private String email; //Email of the user
+    
+    //Constructor for the User class
+    public User(int id,String username,String passwd,String email){
+        this.id = id;
+        this.username = username;
+        this.passwd = passwd;
+        this.email = email;
+    }
+    
+    
+    
+    //Getters and Setters
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public String getUsername() {
+        return username;
     }
-    public String getPassword() {
-        return password;
+
+    public String getPasswd() {
+        return passwd;
     }
-    public void setPassword(String password) {
-        this.password = password;
+
+    public String getEmail() {
+        return email;
     }
-    public String getDiscountStatus() {
-        return discountStatus;
+    
+
+    public void setId(int id) {
+        this.id = id;
     }
-    public void setDiscountStatus(String discountStatus) {
-        this.discountStatus = discountStatus;
+
+    public void setUsername(String username) {
+        this.username = username;
     }
+
+    public void setPasswd(String passwd) {
+        this.passwd = passwd;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
 }

@@ -29,6 +29,12 @@ public class CreateUserController {
         
         //TODO Add SQL query to save user credentials
         
+        // Username πεδίο πρέπει να μην είναι κενό και το πολύ 18 χαρακτήρες
+        // Password πεδίο πρέπει να μην είναι κενό και το λιγότερο 8 χαρακτήρες
+        // Email πεδίο πρέπει να περιέχει το σύμβολο @
+        if ( (!username.isEmpty() && password.length() <= 18) 
+            && (!password.isEmpty() && password.length() >= 8)
+            && (!email.isEmpty() && email.length() >= 8 && email.contains("@")) )
         //Move to Login Page Scene
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
