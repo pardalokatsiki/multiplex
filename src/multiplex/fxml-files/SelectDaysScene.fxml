@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../Documents/GitHub/multiplex/src/multiplex/css-files/selectDays.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.BrowseController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../css-files/selectDays.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.SelectDaysController">
    <children>
       <HBox alignment="CENTER" layoutX="47.0" layoutY="17.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,12 +23,12 @@
                      <children>
                         <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="40.0" prefWidth="120.0" text="Logout" textFill="#450920">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="Comic Sans MS" size="18.0" />
                            </font>
                         </Button>
                         <Label fx:id="userName" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="* Username Here *" textFill="#da627d">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="Comic Sans MS" size="18.0" />
                            </font>
                         </Label>
                      </children>
@@ -37,17 +37,17 @@
                      <children>
                         <Label fx:id="selectedMovieTitle" alignment="CENTER" prefHeight="50.0" prefWidth="360.0" text="* Movie Title *" textFill="WHITE">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Cambria" size="24.0" />
                            </font>
                         </Label>
                         <ImageView fx:id="selectedMoviePoster" fitHeight="313.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Documents/GitHub/multiplex/src/multiplex/ImagesGoHere/asdf.png" />
+                              <Image url="@../ImagesGoHere/asdf.png" />
                            </image>
                         </ImageView>
                         <Label fx:id="selectedMovieDesc" alignment="CENTER" prefHeight="226.0" prefWidth="340.0" text="*Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie *" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Cambria" size="14.0" />
                            </font>
                         </Label>
                      </children>
@@ -56,7 +56,7 @@
                      <children>
                         <Button fx:id="backButton1" alignment="CENTER" mnemonicParsing="false" prefHeight="39.0" prefWidth="137.0" text="Back" textFill="#450920">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="Comic Sans MS" size="18.0" />
                            </font>
                            <HBox.margin>
                               <Insets right="10.0" />
@@ -64,7 +64,7 @@
                         </Button>
                         <Button fx:id="confirmButton1" alignment="CENTER" layoutX="112.0" layoutY="20.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="137.0" text="Confirm" textFill="#450920">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="Comic Sans MS" size="18.0" />
                            </font>
                         </Button>
                      </children>
@@ -77,17 +77,17 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="444.0" styleClass="searchbox">
                            <children>
-                              <TextField fx:id="searchBar" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="transparent" stylesheets="@../Documents/GitHub/multiplex/src/multiplex/css-files/browsePage.css">
+                              <TextField fx:id="searchBar" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="searchbox" stylesheets="@../css-files/browsePage.css">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <font>
-                                    <Font name="System Italic" size="18.0" />
+                                    <Font name="Comic Sans MS" size="18.0" />
                                  </font>
                               </TextField>
                               <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="120.0" text="Search" textFill="#f9dbbd">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font name="Comic Sans MS" size="18.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets />
@@ -103,9 +103,9 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #FEBD0;" stylesheets="@../Documents/GitHub/multiplex/src/multiplex/css-files/browsePage.css" VBox.vgrow="ALWAYS">
+                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #FEBD0;" styleClass="my-scroll-pane" stylesheets="@../css-files/browsePage.css" VBox.vgrow="ALWAYS">
                      <content>
-                        <TilePane fx:id="moviesContainer" hgap="15.0" prefHeight="3.0" prefWidth="720.0" style="-fx-background-color: transparent;" vgap="15.0" />
+                        <TilePane fx:id="moviesContainer" hgap="15.0" prefHeight="3.0" prefWidth="720.0" style="-fx-background-color: transparent;" styleClass="transparent" vgap="15.0" />
                      </content>
                   </ScrollPane>
                </children>
