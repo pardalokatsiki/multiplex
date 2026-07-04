@@ -31,10 +31,14 @@ public class MovieController {
     private ToggleButton movieTitleButton;
 
     private Movie movie;
-
+    
+    // When user clicks the movieTitleButton
     public void setMovieData(Movie movie) {
+        //Set movie to current movie
         this.movie = movie;
+        // Set text of movie button to current movie
         movieTitleButton.setText(movie.getTitle());
+        // Set movie poster art
         Image image = new Image(getClass().getResourceAsStream(movie.getImgPath()));
         moviePosterBrowse.setImage(image);
     }
