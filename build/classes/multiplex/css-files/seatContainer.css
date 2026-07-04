@@ -1,4 +1,4 @@
-#dayButton{
+#seatButton{
     -fx-font-family: "Comic Sans MS";
     -fx-font-size: 25px;
     -fx-background-color:"#fffaba";
@@ -8,12 +8,12 @@
     -fx-border-color: "#dc4423";
 }
 
-#dayButton:hover{
+#seatButton:hover{
     fx-cursor: hand;
     -fx-background-color:"#ffcaba";
 }
 
-#dayButton:selected{
+#seatButton:selected{
     -fx-background-color:"#f0b087";
     -fx-border-color: "#dc4423";
 }

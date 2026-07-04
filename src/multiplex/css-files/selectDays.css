@@ -50,6 +50,42 @@
 
 }
 
+#confirmButton2, #backButton2{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+    -fx-background-radius: 100px;
+}
+
+#confirmButton2:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+#backButton2:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+#confirmButton3, #backButton3{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+    -fx-background-radius: 100px;
+}
+
+#confirmButton3:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+#backButton3:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
 #searchButton{
     -fx-background-color:"#e6959a";
     -fx-background-radius: 100px;

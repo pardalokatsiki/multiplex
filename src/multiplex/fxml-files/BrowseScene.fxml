@@ -69,7 +69,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="444.0" styleClass="searchbox">
                            <children>
-                              <TextField alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="transparent" stylesheets="@../css-files/browsePage.css">
+                              <TextField fx:id="movieSearchField" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="transparent" stylesheets="@../css-files/browsePage.css">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
