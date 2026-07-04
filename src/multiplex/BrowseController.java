@@ -64,44 +64,30 @@ public class BrowseController implements Initializable {
         MovieService service = new MovieService();
         movies = service.getAllMovies();
         // TODO: Add code for movie posters
-        //temporary code
-        for(Movie mov : movies) {
-            mov.setImgPath("ImagesGoHere/asdf.png");
-        }
 
         if(movies.size() > 0) {
             setChosenMovie(movies.get(0));
         }
 
-        int column = 0;
-        int row = 1;
+        moviesContainer.setMinWidth(Region.USE_COMPUTED_SIZE);
+        moviesContainer.setPrefWidth(Region.USE_COMPUTED_SIZE);
+        moviesContainer.setMaxWidth(Region.USE_PREF_SIZE);
+        //set tilepane height
+        moviesContainer.setMinHeight(Region.USE_COMPUTED_SIZE);
+        moviesContainer.setPrefHeight(Region.USE_COMPUTED_SIZE);
+        moviesContainer.setMaxHeight(Region.USE_PREF_SIZE);
+
         try {
-            for(int i = 0; i < movies.size(); i++) {
+            for(Movie movie : movies) {
                 // Create a loader for each movie poster
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("fxml-files/Movie.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 MovieController movieController = fxmlLoader.getController();
-                movieController.setMovieData(movies.get(0));
+                movieController.setMovieData(movie);
 
-                if(column == 3) {
-                    column = 0;
-                    row++;
-                }
-
-                moviesContainer.setPrefColumns(column++);
-                moviesContainer.setPrefRows(row);
                 moviesContainer.getChildren().add(anchorPane);
-
-                moviesContainer.setMinWidth(Region.USE_COMPUTED_SIZE);
-                moviesContainer.setPrefWidth(Region.USE_COMPUTED_SIZE);
-                moviesContainer.setMaxWidth(Region.USE_PREF_SIZE);
-
-                //set tilepane height
-                moviesContainer.setMinHeight(Region.USE_COMPUTED_SIZE);
-                moviesContainer.setPrefHeight(Region.USE_COMPUTED_SIZE);
-                moviesContainer.setMaxHeight(Region.USE_PREF_SIZE);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             }
@@ -115,7 +101,7 @@ public class BrowseController implements Initializable {
         // Set movie title
         movieTitle.setText(movie.getTitle());
         // Set movie poster art
-        var image = new Image(getClass().getResourceAsStream(movie.getImgPath()));
+        var image = new Image(getClass().getResourceAsStream("ImagesGoHere/asdf.png"));
         moviePoster.setImage(image);
         // Set movie description
         movieDesc.setText(movie.getInfo());

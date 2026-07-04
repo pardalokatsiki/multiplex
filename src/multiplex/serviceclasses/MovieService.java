@@ -30,8 +30,7 @@ public class MovieService {
                     resultSet.getInt("duration_min"),
                     resultSet.getString("info"),
                     resultSet.getString("showday"),
-                    resultSet.getString("showtime"),
-                    resultSet.getString("image")
+                    resultSet.getString("showtime")
                 );
                 moviesList.add(movie); //adding the movie to the list of movies that match the search criteria
             }
@@ -58,8 +57,7 @@ public class MovieService {
                     resultSet.getInt("duration_min"),
                     resultSet.getString("info"),
                     resultSet.getString("showday"),
-                    resultSet.getString("showtime"),
-                    resultSet.getString("image")
+                    resultSet.getString("showtime")
                 );
                 moviesList.add(movie); //adding the movie to the list of all movies
             }

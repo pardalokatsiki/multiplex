@@ -39,7 +39,7 @@ public class MovieController {
         // Set text of movie button to current movie
         movieTitleButton.setText(movie.getTitle());
         // Set movie poster art
-        Image image = new Image(getClass().getResourceAsStream(movie.getImgPath()));
+        Image image = new Image(getClass().getResourceAsStream("ImagesGoHere/asdf.png"));
         moviePosterBrowse.setImage(image);
     }
 }

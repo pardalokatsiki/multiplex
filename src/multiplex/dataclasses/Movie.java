@@ -12,7 +12,7 @@ public class Movie {
     
 
     //Constructor for the Movie class
-    public Movie(int id, String title, int duration_min, String info,String showDay,String showTime, String imgPath){
+    public Movie(int id, String title, int duration_min, String info,String showDay,String showTime){
         
         this.id = id;
         this.title = title;
@@ -20,7 +20,6 @@ public class Movie {
         this.info = info;
         this.showDay = showDay;
         this.showTime = showTime;
-        this.imgPath = imgPath;
         
     }
 
@@ -49,9 +48,6 @@ public class Movie {
         return showTime;
     }
 
-    public String getImgPath() {
-        return imgPath;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -77,7 +73,4 @@ public class Movie {
         this.showTime = showTime;
     }
     
-    public void setImgPath(String imgPath) {
-        this.imgPath = imgPath;
-    }
 }
