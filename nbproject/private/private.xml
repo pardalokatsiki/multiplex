@@ -8,6 +8,12 @@
             <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/css-files/browsePage.css</file>
             <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/MultiplexView.java</file>
             <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/fxml-files/SelectDaysScene.fxml</file>
+            <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/css-files/selectDays.css</file>
+            <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/fxml-files/Day.fxml</file>
+            <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/fxml-files/SelectSeatScene.fxml</file>
+            <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/css-files/dayContainer.css</file>
+            <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/css-files/seatContainer.css</file>
+            <file>file:/C:/Users/pkouf/texnLog/multiplex/src/multiplex/css-files/timeContainer.css</file>
         </group>
     </open-files>
 </project-private>
