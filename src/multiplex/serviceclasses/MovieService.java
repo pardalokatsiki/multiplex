@@ -45,7 +45,7 @@ public class MovieService {
     //Method to get all movies, this method will retrieve all movies from the database and return a list of Movie objects
     public List<Movie> getAllMovies() {
         List<Movie> moviesList = new ArrayList<>();
-        String query = "SELECT * FROM movies"; //SQL query to get all movies
+        String query = "SELECT * FROM Movies"; //SQL query to get all movies
         
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
