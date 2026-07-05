@@ -63,8 +63,15 @@ public class BrowseController implements Initializable {
         // Start MovieService and get all movies from the database
         MovieService service = new MovieService();
         movies = service.getAllMovies();
-        // TODO: Add code for movie posters
 
+        
+        // TODO: Add code for movie posters
+        for(Movie movie : movies) {
+            String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
+            movie.setImage(imagePath);
+            System.out.println(imagePath);
+        }
+ 
         if(movies.size() > 0) {
             setChosenMovie(movies.get(0));
         }
@@ -101,7 +108,7 @@ public class BrowseController implements Initializable {
         // Set movie title
         movieTitle.setText(movie.getTitle());
         // Set movie poster art
-        var image = new Image(getClass().getResourceAsStream("ImagesGoHere/asdf.png"));
+        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
         moviePoster.setImage(image);
         // Set movie description
         movieDesc.setText(movie.getInfo());
