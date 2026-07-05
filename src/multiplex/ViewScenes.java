@@ -6,8 +6,8 @@ public enum ViewScenes {
     REGISTER("fxml-files/CreateUserPageScene.fxml", "css-files/registerPage.css"),
     BROWSE("fxml-files/BrowseScene.fxml", "css-files/browsePage.css"),
     DAY("fxml-files/SelectDaysScene.fxml", "css-files/selectDays.css"),
-    TIME("fxml-files/SelectTimeScene.fxml","css-files/selecTime.css"),
-    SEAT("fxml-files/SelectSeatScene.fxml","css-files/selecTime.css");
+    TIME("fxml-files/SelectTimeScene.fxml", "css-files/selectTime.css"),
+    SEAT("fxml-files/SelectSeatScene.fxml", "css-files/selectSeat.css");
 
     private final String fxmlFile;
     private final String cssFile;

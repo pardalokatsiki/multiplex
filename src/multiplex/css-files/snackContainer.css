@@ -1,0 +1,38 @@
+.root{
+    -fx-background-color: "#fffaba";
+    -fx-background-radius: 50px;
+    -fx-border-radius: 15;
+}
+
+#snackName{
+    -fx-font-family: "Comic Sans MS";
+}
+
+.spinner{
+    -fx-background-radius: 100px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-width: 6px;
+    -fx-border-color: "#dc4423";
+}
+
+.spinner .text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: rgb(216, 83, 83);
+    -fx-font-size: 10px;
+    -fx-border-width: 0;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #f56e50;
+}
+
+.spinner:hover{
+    fx-cursor: hand;
+    -fx-background-color:"#ffcaba";
+}
+
+AnchorPane{
+    -fx-background-color: transparent;
+}

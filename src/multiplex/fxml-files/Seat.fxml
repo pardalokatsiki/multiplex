@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="dayPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-border-radius: 100;" styleClass="dayContainer" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="dayPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-border-radius: 100;" styleClass="dayContainer" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.SeatController">
    <children>
       <ToggleButton fx:id="seatButton" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" stylesheets="@../css-files/seatContainer.css" textFill="#d15151" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>

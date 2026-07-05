@@ -10,4 +10,12 @@ public class DayController {
 
     @FXML
     private AnchorPane dayPane;
+
+    private String day;
+
+    public void setDayButton(String day)
+    {
+        this.day = day;
+        dayButton.setText(day);
+    }
 }

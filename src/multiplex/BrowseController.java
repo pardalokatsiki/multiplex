@@ -150,5 +150,6 @@ public class BrowseController {
         moviePoster.setImage(image);
         // Set movie description
         movieDesc.setText(movie.getInfo());
+        Session.setSelectedMovie(movie);
     }
 }
