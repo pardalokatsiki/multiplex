@@ -3,6 +3,9 @@ package multiplex;
 import multiplex.dataclasses.Movie;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
@@ -31,8 +34,8 @@ public class MovieController {
     private ToggleButton movieTitleButton;
 
     private Movie movie;
+    private Consumer<Movie> onSelected;  
     
-    // When user clicks the movieTitleButton
     public void setMovieData(Movie movie) {
         //Set movie to current movie
         this.movie = movie;
@@ -41,5 +44,16 @@ public class MovieController {
         // Set movie poster art
         Image image = new Image(getClass().getResourceAsStream(movie.getImage()));
         moviePosterBrowse.setImage(image);
+    }
+    
+    // When user clicks on a movie title, it will appear on the left side
+    @FXML
+    public void movieTitleClick(ActionEvent event) {
+        if(onSelected != null)
+            onSelected.accept(movie);
+    }
+    
+    public void setOnSelected(Consumer<Movie> onSelected) {
+        this.onSelected = onSelected;
     }
 }

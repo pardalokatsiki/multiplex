@@ -63,19 +63,16 @@ public class BrowseController implements Initializable {
         // Start MovieService and get all movies from the database
         MovieService service = new MovieService();
         movies = service.getAllMovies();
-
-        
-        // TODO: Add code for movie posters
+        // Set poster art for movies
         for(Movie movie : movies) {
             String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
             movie.setImage(imagePath);
-            System.out.println(imagePath);
         }
- 
+
         if(movies.size() > 0) {
             setChosenMovie(movies.get(0));
         }
-
+        
         moviesContainer.setMinWidth(Region.USE_COMPUTED_SIZE);
         moviesContainer.setPrefWidth(Region.USE_COMPUTED_SIZE);
         moviesContainer.setMaxWidth(Region.USE_PREF_SIZE);
@@ -93,7 +90,7 @@ public class BrowseController implements Initializable {
 
                 MovieController movieController = fxmlLoader.getController();
                 movieController.setMovieData(movie);
-
+                movieController.setOnSelected(this::setChosenMovie);
                 moviesContainer.getChildren().add(anchorPane);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
@@ -102,8 +99,8 @@ public class BrowseController implements Initializable {
            e.printStackTrace();
         }
     }
+
     // Method for when a user clicks on a movie
-    @FXML
     public void setChosenMovie(Movie movie) {
         // Set movie title
         movieTitle.setText(movie.getTitle());
