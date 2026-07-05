@@ -1,0 +1,23 @@
+#dayButton{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 25px;
+    -fx-background-color:"#fffaba";
+    -fx-background-radius: 100px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: "#dc4423";
+}
+
+#dayButton:hover{
+    fx-cursor: hand;
+    -fx-background-color:"#ffcaba";
+}
+
+#dayButton:selected{
+    -fx-background-color:"#f0b087";
+    -fx-border-color: "#dc4423";
+}
+
+AnchorPane{
+    -fx-background-color: transparent;
+}
