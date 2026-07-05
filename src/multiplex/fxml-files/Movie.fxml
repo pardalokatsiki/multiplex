@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="movieContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="346.0" stylesheets="@../css-files/movieContainer.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.MovieController">
+<AnchorPane fx:id="movieContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="346.0" stylesheets="@../css-files/movieContainer.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.controllers.MovieController">
    <children>
       <StackPane fx:id="imageBorder" layoutX="42.0" layoutY="22.0" prefHeight="324.0" prefWidth="262.0">
          <children>

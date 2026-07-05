@@ -9,7 +9,16 @@ public final class Session {
     private static String seatno;
     private static String date;
     private static String time;
+    private static boolean bookTicket;
     
+    public static boolean isBookTicket() {
+        return bookTicket;
+    }
+
+    public static void setBookTicket(boolean bookTicket) {
+        Session.bookTicket = bookTicket;
+    }
+
     public static String getTime() {
         return time;
     }

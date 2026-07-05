@@ -1,8 +1,10 @@
-package multiplex;
+package multiplex.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import multiplex.Session;
+import multiplex.ViewScenes;
 import multiplex.dataclasses.User;
 
 public class PaymentResultController {
@@ -32,5 +34,11 @@ public class PaymentResultController {
         // Set current user credentials
         User user = Session.getCurrentUser();
         userName.setText(user.getUsername());
+
+        if(Session.isBookTicket()) {
+            paymentMessage.setText("Payment Successful. We Hope You Enjoy Your Cinematic Experience!");
+        } else {
+            paymentMessage.setText("Payment Not Successful. Please Revisit Your Input Details");
+        }
     }
 }

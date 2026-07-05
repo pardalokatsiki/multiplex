@@ -1,4 +1,4 @@
-package multiplex;
+package multiplex.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,8 +9,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import multiplex.Session;
+import multiplex.ViewScenes;
 import multiplex.dataclasses.Movie;
 import multiplex.dataclasses.User;
+import multiplex.serviceclasses.TicketService;
 
 public class PaymentController {
     @FXML
@@ -69,6 +72,15 @@ public class PaymentController {
 
     @FXML
     public void continueButtonClick() {
+        //MultiplexController.switchScene(ViewScenes.RESULT);
+        TicketService service = new TicketService();
+        
+        Movie movie = Session.getSelectedMovie();
+        User user = Session.getCurrentUser();
+        
+        boolean booking = service.bookTicket(movieSeat.getText(), 9.50, movie.getId(), user.getId());
+        
+        Session.setBookTicket(booking);
         MultiplexController.switchScene(ViewScenes.RESULT);
     }
 

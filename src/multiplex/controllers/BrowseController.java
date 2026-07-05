@@ -1,9 +1,7 @@
-package multiplex;
+package multiplex.controllers;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -15,18 +13,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
+import multiplex.Session;
+import multiplex.ViewScenes;
 import multiplex.dataclasses.Movie;
 import multiplex.dataclasses.User;
 import multiplex.serviceclasses.MovieService;
 import javafx.scene.layout.Region;
 
 public class BrowseController {
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
     @FXML
     private Button logoutButton;
 
@@ -68,7 +62,7 @@ public class BrowseController {
 
         // Set poster art for movies
         for (Movie movie : movies) {
-            String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
+            String imagePath = "/multiplex/ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
             movie.setImage(imagePath);
         }
 
@@ -121,12 +115,12 @@ public class BrowseController {
             for (Movie movie : movieList) {
 
                 // Update image path manually
-                String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
+                String imagePath = "/multiplex/ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
                 movie.setImage(imagePath);
 
                 // Create a loader for each movie poster
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("fxml-files/Movie.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("/multiplex/fxml-files/Movie.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 MovieController movieController = fxmlLoader.getController();

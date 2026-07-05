@@ -2,6 +2,7 @@ package multiplex;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import multiplex.controllers.MultiplexController;
 
 public class MultiplexView extends Application {
     public static void main(String[] args) {

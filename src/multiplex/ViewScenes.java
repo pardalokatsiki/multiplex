@@ -2,15 +2,15 @@ package multiplex;
 
 public enum ViewScenes {
 
-    LOGIN("fxml-files/LoginPageScene.fxml", "css-files/loginPage.css"),
-    REGISTER("fxml-files/CreateUserPageScene.fxml", "css-files/registerPage.css"),
-    BROWSE("fxml-files/BrowseScene.fxml", "css-files/browsePage.css"),
-    DAY("fxml-files/SelectDaysScene.fxml", "css-files/selectDays.css"),
-    TIME("fxml-files/SelectTimeScene.fxml", "css-files/selectTime.css"),
-    SEAT("fxml-files/SelectSeatScene.fxml", "css-files/selectSeat.css"),
-    CANTEEN("fxml-files/CanteenScene.fxml", "css-files/canteenPage.css"),
-    PAYMENT("fxml-files/paymentScene.fxml", "css-files/paymentPage.css"),
-    RESULT("fxml-files/PaymentResultScene.fxml", "css-files/paymentResult.css");
+    LOGIN("/multiplex/fxml-files/LoginPageScene.fxml", "/multiplex/css-files/loginPage.css"),
+    REGISTER("/multiplex/fxml-files/CreateUserPageScene.fxml", "/multiplex/css-files/registerPage.css"),
+    BROWSE("/multiplex/fxml-files/BrowseScene.fxml", "/multiplex/css-files/browsePage.css"),
+    DAY("/multiplex/fxml-files/SelectDaysScene.fxml", "/multiplex/css-files/selectDays.css"),
+    TIME("/multiplex/fxml-files/SelectTimeScene.fxml", "/multiplex/css-files/selectTime.css"),
+    SEAT("/multiplex/fxml-files/SelectSeatScene.fxml", "/multiplex/css-files/selectSeat.css"),
+    CANTEEN("/multiplex/fxml-files/CanteenScene.fxml", "/multiplex/css-files/canteenPage.css"),
+    PAYMENT("/multiplex/fxml-files/paymentScene.fxml", "/multiplex/css-files/paymentPage.css"),
+    RESULT("/multiplex/fxml-files/PaymentResultScene.fxml", "/multiplex/css-files/paymentResult.css");
 
     private final String fxmlFile;
     private final String cssFile;

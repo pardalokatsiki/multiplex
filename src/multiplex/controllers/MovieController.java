@@ -1,4 +1,4 @@
-package multiplex;
+package multiplex.controllers;
 
 import multiplex.dataclasses.Movie;
 import java.net.URL;

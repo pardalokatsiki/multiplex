@@ -1,10 +1,9 @@
-package multiplex;
-
-import java.util.function.Consumer;
+package multiplex.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
+import multiplex.Session;
 
 public class DayController {
     @FXML

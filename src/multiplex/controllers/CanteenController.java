@@ -1,4 +1,4 @@
-package multiplex;
+package multiplex.controllers;
 
 import java.util.ArrayList;
 
@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
+import multiplex.Session;
+import multiplex.ViewScenes;
 import multiplex.dataclasses.User;
 
 public class CanteenController {
@@ -71,11 +73,11 @@ public class CanteenController {
             for (String item : items) {
                 // Create a loader for each day instance
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("fxml-files/Snack.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("/multiplex/fxml-files/Snack.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 SnackController snackController = fxmlLoader.getController();
-                String path = "ImagesGoHere/"+ item + ".png";
+                String path = "/multiplex/ImagesGoHere/"+ item + ".png";
                 snackController.setSnackData(path, item);
                 snackList.getChildren().add(anchorPane);
 

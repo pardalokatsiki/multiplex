@@ -1,9 +1,10 @@
-package multiplex;
+package multiplex.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import multiplex.ViewScenes;
 import multiplex.serviceclasses.UserService;
 
 public class CreateUserController {

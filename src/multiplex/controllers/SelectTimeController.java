@@ -1,4 +1,4 @@
-package multiplex;
+package multiplex.controllers;
 
 import java.util.ArrayList;
 
@@ -10,23 +10,21 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
+import multiplex.Session;
+import multiplex.ViewScenes;
 import multiplex.dataclasses.Movie;
 import multiplex.dataclasses.User;
 
-public class SelectSeatController {
+public class SelectTimeController {
     @FXML
-    private Button backButton3;
+    private Button backButton2;
 
     @FXML
-    private Button confirmButton3;
+    private Button confirmButton2;
 
     @FXML
     private Button logoutButton;
-
-    @FXML
-    private TilePane seatList;
 
     @FXML
     private Label selectedMovieDesc;
@@ -38,6 +36,9 @@ public class SelectSeatController {
     private Label selectedMovieTitle;
 
     @FXML
+    private VBox timeList;
+
+    @FXML
     private Label userName;
 
     @FXML
@@ -47,43 +48,44 @@ public class SelectSeatController {
 
     @FXML
     public void continueButtonClick() {
-        MultiplexController.switchScene(ViewScenes.CANTEEN);
+        MultiplexController.switchScene(ViewScenes.SEAT);
     }
 
     @FXML
     public void backButtonClick() {
-        MultiplexController.switchScene(ViewScenes.TIME);
+        MultiplexController.switchScene(ViewScenes.DAY);
     }
 
     public void initialize() {
         selectedMoviePane();
-        int columns = 9;
-        int rows = 9;
-        ArrayList<String> seats = new ArrayList<>();
 
-        for (int i = 0; i < rows; i++) {
-            char temp = (char) +('A' + i);
-            for (int j = 0; j < columns; j++) {
-                seats.add(temp + "" + (j + 1));
-            }
-        }
-        displayOptions(seats);
+        ArrayList<String> room = new ArrayList<>();
+        ArrayList<String> time = new ArrayList<>();
+        time.add("19:00");
+        time.add("18:00");
+        time.add("16:30");
+
+        room.add("Room 01");
+        room.add("Room 02");
+        room.add("Room 03");
+
+        displayOptions(room, time);
     }
 
-    public void displayOptions(ArrayList<String> seats) {
+    public void displayOptions(ArrayList<String> room, ArrayList<String> time) {
         // clear vbox
-        seatList.getChildren().clear();
+        timeList.getChildren().clear();
 
         try {
-            for (String seat : seats) {
+            for (int i = 0; i < room.size(); i++) {
                 // Create a loader for each day instance
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("fxml-files/Seat.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("/multiplex/fxml-files/Time.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
-                SeatController seatController = fxmlLoader.getController();
-                seatController.setSeatButton(seat);
-                seatList.getChildren().add(anchorPane);
+                TimeController timeController = fxmlLoader.getController();
+                timeController.setRoomTime(room.get(i), time.get(i));
+                timeList.getChildren().add(anchorPane);
 
                 VBox.setMargin(anchorPane, new Insets(10));
             }
