@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../css-files/selectDays.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.paymentPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../css-files/selectDays.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.PaymentController">
    <children>
       <HBox alignment="CENTER" layoutX="47.0" layoutY="17.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -55,7 +55,7 @@
                   </VBox>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" styleClass="color3" VBox.vgrow="ALWAYS">
                      <children>
-                        <Button fx:id="backButton5" alignment="CENTER" mnemonicParsing="false" prefHeight="39.0" prefWidth="137.0" stylesheets="@../css-files/paymentPage.css" text="Back" textFill="#450920">
+                        <Button fx:id="backButton5" alignment="CENTER" mnemonicParsing="false" onAction="#backButtonClick" prefHeight="39.0" prefWidth="137.0" stylesheets="@../css-files/paymentPage.css" text="Back" textFill="#450920">
                            <font>
                               <Font name="Comic Sans MS" size="18.0" />
                            </font>
@@ -63,7 +63,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="confirmButton5" alignment="CENTER" layoutX="112.0" layoutY="20.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="137.0" stylesheets="@../css-files/paymentPage.css" text="Confirm" textFill="#450920">
+                        <Button fx:id="confirmButton5" alignment="CENTER" layoutX="112.0" layoutY="20.0" mnemonicParsing="false" onAction="#continueButtonClick" prefHeight="34.0" prefWidth="137.0" stylesheets="@../css-files/paymentPage.css" text="Confirm" textFill="#450920">
                            <font>
                               <Font name="Comic Sans MS" size="18.0" />
                            </font>

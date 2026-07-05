@@ -7,7 +7,10 @@ public enum ViewScenes {
     BROWSE("fxml-files/BrowseScene.fxml", "css-files/browsePage.css"),
     DAY("fxml-files/SelectDaysScene.fxml", "css-files/selectDays.css"),
     TIME("fxml-files/SelectTimeScene.fxml", "css-files/selectTime.css"),
-    SEAT("fxml-files/SelectSeatScene.fxml", "css-files/selectSeat.css");
+    SEAT("fxml-files/SelectSeatScene.fxml", "css-files/selectSeat.css"),
+    CANTEEN("fxml-files/CanteenScene.fxml", "css-files/canteenPage.css"),
+    PAYMENT("fxml-files/paymentScene.fxml", "css-files/paymentPage.css"),
+    RESULT("fxml-files/PaymentResultScene.fxml", "css-files/paymentResult.css");
 
     private final String fxmlFile;
     private final String cssFile;

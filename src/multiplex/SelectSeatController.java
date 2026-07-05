@@ -47,7 +47,7 @@ public class SelectSeatController {
 
     @FXML
     public void continueButtonClick() {
-        System.out.println("Purchase Successful");
+        MultiplexController.switchScene(ViewScenes.CANTEEN);
     }
 
     @FXML
