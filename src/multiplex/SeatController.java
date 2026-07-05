@@ -12,6 +12,12 @@ public class SeatController {
     @FXML
     private ToggleButton seatButton;
 
+    @FXML
+    private void seatButtonClick() {
+        String seat = seatButton.getText();
+        Session.setSeatno(seat); 
+    }
+
     public void setSeatButton(String seat) {
         seatButton.setText(seat);
     }

@@ -3,6 +3,7 @@ package multiplex;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import multiplex.dataclasses.User;
 
 public class PaymentResultController {
     @FXML
@@ -25,5 +26,11 @@ public class PaymentResultController {
     @FXML
     public void logoutButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
+    }
+
+    public void initialize() {
+        // Set current user credentials
+        User user = Session.getCurrentUser();
+        userName.setText(user.getUsername());
     }
 }

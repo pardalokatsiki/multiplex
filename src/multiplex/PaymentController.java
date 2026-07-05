@@ -95,6 +95,11 @@ public class PaymentController {
         Movie movie = Session.getSelectedMovie();
         selectedMovieDesc.setText(movie.getInfo());
         selectedMovieTitle.setText(movie.getTitle());
+        movieTitle.setText(movie.getTitle());
+        movieDate.setText(Session.getDate());
+        movieTime.setText(Session.getTime());
+        System.out.println(Session.getSeatno());
+        movieSeat.setText(Session.getSeatno());
         var image = new Image(getClass().getResourceAsStream(movie.getImage()));
         selectedMoviePoster.setImage(image);
     }

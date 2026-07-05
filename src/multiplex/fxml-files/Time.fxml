@@ -16,7 +16,7 @@
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Label>
-            <ToggleButton fx:id="timeButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="210.0" stylesheets="@../css-files/timeContainer.css" text="*ΏΡΑ ΥΥ:ZZ*" textAlignment="CENTER" textFill="#d15151">
+            <ToggleButton fx:id="timeButton" mnemonicParsing="false" onAction="#timeButtonClick" prefHeight="60.0" prefWidth="210.0" stylesheets="@../css-files/timeContainer.css" text="*ΏΡΑ ΥΥ:ZZ*" textAlignment="CENTER" textFill="#d15151">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>

@@ -44,12 +44,12 @@
                               <Image url="@../ImagesGoHere/cart.png" />
                            </image>
                         </ImageView>
-                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="180.0" text="TOTAL IN CART:" textFill="WHITE">
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="180.0" textFill="WHITE">
                            <font>
                               <Font name="Cambria" size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="totalAmount" text="10.00 €" textFill="WHITE">
+                        <Label fx:id="totalAmount" textFill="WHITE">
                            <font>
                               <Font name="Cambria" size="20.0" />
                            </font>

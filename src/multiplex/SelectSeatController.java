@@ -64,7 +64,7 @@ public class SelectSeatController {
         for (int i = 0; i < rows; i++) {
             char temp = (char) +('A' + i);
             for (int j = 0; j < columns; j++) {
-                seats.add(temp + "-" + (j + 1));
+                seats.add(temp + "" + (j + 1));
             }
         }
         displayOptions(seats);

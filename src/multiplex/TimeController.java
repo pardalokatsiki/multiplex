@@ -15,6 +15,12 @@ public class TimeController {
     @FXML
     private Label roomLabel;
     
+    @FXML
+    public void timeButtonClick() {
+        String time = timeButton.getText();
+        Session.setTime(time);
+    }
+
     public void setRoomTime(String room, String time) {
         roomLabel.setText(room);
         timeButton.setText(time);
