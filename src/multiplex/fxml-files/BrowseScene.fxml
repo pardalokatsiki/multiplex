@@ -69,7 +69,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="444.0" styleClass="searchbox">
                            <children>
-                              <TextField alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="transparent" stylesheets="@../css-files/browsePage.css">
+                              <TextField fx:id="searchField" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="300.0" promptText="Type here to search..." styleClass="transparent" stylesheets="@../css-files/browsePage.css">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -77,7 +77,7 @@
                                     <Font name="System Italic" size="18.0" />
                                  </font>
                               </TextField>
-                              <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="120.0" text="Search" textFill="#f9dbbd">
+                              <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonClick" prefHeight="20.0" prefWidth="120.0" text="Search" textFill="#f9dbbd">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

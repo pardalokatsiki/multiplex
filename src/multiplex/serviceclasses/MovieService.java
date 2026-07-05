@@ -17,7 +17,7 @@ public class MovieService {
     //Method to search for movies, this method will search for movies in the database that match the given keyword in their title and return a list of Movie objects that match the search criteria
     public List<Movie> searchMovies(String keyword) {
         List<Movie> moviesList = new ArrayList<>();
-        String query = "SELECT * FROM movies WHERE title LIKE ?"; //SQL query to search for movies by title using ? to prevent SQL injection
+        String query = "SELECT * FROM Movies WHERE title LIKE ?"; //SQL query to search for movies by title using ? to prevent SQL injection
         
         try (PreparedStatement statement = connection.prepareStatement(query)) { //using try-with-resources to automatically close the PreparedStatement
             statement.setString(1, "%" + keyword + "%"); //using % for wildcard search in SQL

@@ -48,7 +48,7 @@ public class MovieController {
     
     // When user clicks on a movie title, it will appear on the left side
     @FXML
-    public void movieTitleClick(ActionEvent event) {
+    public void movieTitleClick() {
         if(onSelected != null)
             onSelected.accept(movie);
     }

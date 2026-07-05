@@ -1,6 +1,5 @@
 package multiplex;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -27,7 +26,7 @@ public class CreateUserController {
     private Label errorLabel;   
 
     @FXML
-    void createAccountClick(ActionEvent event) {
+    void createAccountClick() {
         String username = createUsername.getText();
         String password = createPass.getText();
         String email = createEmail.getText();
@@ -41,14 +40,13 @@ public class CreateUserController {
             MultiplexController.switchScene(ViewScenes.LOGIN);
         } else {
             // Show error message if there are problems in the input fields 
-            // TODO fix errorLabel not showing the entire text
             errorLabel.setText(message);
         }
 
     }
 
     @FXML
-    void goBackButtonClick(ActionEvent goBack) {
+    void goBackButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 }

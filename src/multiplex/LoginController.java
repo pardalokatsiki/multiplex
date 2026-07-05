@@ -1,7 +1,6 @@
 package multiplex;
 
 import java.io.IOException;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -28,7 +27,7 @@ public class LoginController {
     private Label errorLabel;
 
     @FXML
-    void loginButtonClick(ActionEvent event) {
+    void loginButtonClick() {
         // Get username from username field
         String name = userField.getText();
         // Get password from password
@@ -56,7 +55,7 @@ public class LoginController {
     }
 
     @FXML
-    public void registerLinkClick(ActionEvent event) throws IOException {
+    public void registerLinkClick() throws IOException {
         // Move to Register Page Scene
         MultiplexController.switchScene(ViewScenes.REGISTER);
     }

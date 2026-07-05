@@ -4,13 +4,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -21,7 +20,7 @@ import multiplex.dataclasses.User;
 import multiplex.serviceclasses.MovieService;
 import javafx.scene.layout.Region;
 
-public class BrowseController implements Initializable {
+public class BrowseController {
     @FXML
     private ResourceBundle resources;
 
@@ -47,15 +46,18 @@ public class BrowseController implements Initializable {
     private Button searchButton;
 
     @FXML
+    private TextField searchField;
+
+    @FXML
     private Button ticketButton;
 
     @FXML
     private Label userName;
 
     private List<Movie> movies = new ArrayList<>();
+    private List<Movie> search = new ArrayList<>();
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize() {
         // Set current user credentials
         User user = Session.getCurrentUser();
         userName.setText(user.getUsername());
@@ -63,6 +65,7 @@ public class BrowseController implements Initializable {
         // Start MovieService and get all movies from the database
         MovieService service = new MovieService();
         movies = service.getAllMovies();
+
         // Set poster art for movies
         for(Movie movie : movies) {
             String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
@@ -72,17 +75,30 @@ public class BrowseController implements Initializable {
         if(movies.size() > 0) {
             setChosenMovie(movies.get(0));
         }
-        
+
+        // Set Tilepane Width
         moviesContainer.setMinWidth(Region.USE_COMPUTED_SIZE);
         moviesContainer.setPrefWidth(Region.USE_COMPUTED_SIZE);
         moviesContainer.setMaxWidth(Region.USE_PREF_SIZE);
-        //set tilepane height
+        // Set tilepane height
         moviesContainer.setMinHeight(Region.USE_COMPUTED_SIZE);
         moviesContainer.setPrefHeight(Region.USE_COMPUTED_SIZE);
         moviesContainer.setMaxHeight(Region.USE_PREF_SIZE);
 
+        displayMovies(movies);
+    }
+
+    public void displayMovies(List<Movie> movieList) {
+        // clear tilepane
+        moviesContainer.getChildren().clear();
+
         try {
-            for(Movie movie : movies) {
+            for(Movie movie : movieList) {
+
+                // Update image path manually
+                String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
+                movie.setImage(imagePath);
+                
                 // Create a loader for each movie poster
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("fxml-files/Movie.fxml"));
@@ -111,8 +127,23 @@ public class BrowseController implements Initializable {
         movieDesc.setText(movie.getInfo());
     }
 
+    // When user clicks the search button
     @FXML
-    public  void logoutButtonClick(ActionEvent logout) {
+    public void searchButtonClick() {
+        MovieService service = new MovieService();
+        String movieSearch = searchField.getText();
+        
+        search = service.searchMovies(movieSearch);
+
+        if(movieSearch.equals(null)) {
+            displayMovies(movies);
+        } else {
+            displayMovies(search);
+        }
+    }
+
+    @FXML
+    public  void logoutButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 }
