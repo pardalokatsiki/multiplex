@@ -67,12 +67,12 @@ public class BrowseController {
         movies = service.getAllMovies();
 
         // Set poster art for movies
-        for(Movie movie : movies) {
+        for (Movie movie : movies) {
             String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
             movie.setImage(imagePath);
         }
 
-        if(movies.size() > 0) {
+        if (movies.size() > 0) {
             setChosenMovie(movies.get(0));
         }
 
@@ -88,17 +88,42 @@ public class BrowseController {
         displayMovies(movies);
     }
 
+    // When user clicks the search button
+    @FXML
+    public void searchButtonClick() {
+        MovieService service = new MovieService();
+        String movieSearch = movieSearchField.getText();
+
+        search = service.searchMovies(movieSearch);
+
+        if (movieSearch.equals(null)) {
+            displayMovies(movies);
+        } else {
+            displayMovies(search);
+        }
+    }
+
+    @FXML
+    public void ticketButtonClick() {
+        MultiplexController.switchScene(ViewScenes.DAY);
+    }
+
+    @FXML
+    public void logoutButtonClick() {
+        MultiplexController.switchScene(ViewScenes.LOGIN);
+    }
+
     public void displayMovies(List<Movie> movieList) {
         // clear tilepane
         moviesList.getChildren().clear();
 
         try {
-            for(Movie movie : movieList) {
+            for (Movie movie : movieList) {
 
                 // Update image path manually
                 String imagePath = "ImagesGoHere/MoviePosters/" + movie.getId() + ".png";
                 movie.setImage(imagePath);
-                
+
                 // Create a loader for each movie poster
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("fxml-files/Movie.fxml"));
@@ -112,7 +137,7 @@ public class BrowseController {
                 GridPane.setMargin(anchorPane, new Insets(10));
             }
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
@@ -125,25 +150,5 @@ public class BrowseController {
         moviePoster.setImage(image);
         // Set movie description
         movieDesc.setText(movie.getInfo());
-    }
-
-    // When user clicks the search button
-    @FXML
-    public void searchButtonClick() {
-        MovieService service = new MovieService();
-        String movieSearch = movieSearchField.getText();
-        
-        search = service.searchMovies(movieSearch);
-
-        if(movieSearch.equals(null)) {
-            displayMovies(movies);
-        } else {
-            displayMovies(search);
-        }
-    }
-
-    @FXML
-    public  void logoutButtonClick() {
-        MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 }
