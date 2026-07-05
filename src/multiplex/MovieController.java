@@ -4,8 +4,6 @@ import multiplex.dataclasses.Movie;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.Consumer;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;

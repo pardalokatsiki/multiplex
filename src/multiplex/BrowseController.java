@@ -40,13 +40,13 @@ public class BrowseController {
     private Label movieTitle;
 
     @FXML
-    private TilePane moviesContainer;
+    private TilePane moviesList;
 
     @FXML
     private Button searchButton;
 
     @FXML
-    private TextField searchField;
+    private TextField movieSearchField;
 
     @FXML
     private Button ticketButton;
@@ -77,20 +77,20 @@ public class BrowseController {
         }
 
         // Set Tilepane Width
-        moviesContainer.setMinWidth(Region.USE_COMPUTED_SIZE);
-        moviesContainer.setPrefWidth(Region.USE_COMPUTED_SIZE);
-        moviesContainer.setMaxWidth(Region.USE_PREF_SIZE);
+        moviesList.setMinWidth(Region.USE_COMPUTED_SIZE);
+        moviesList.setPrefWidth(Region.USE_COMPUTED_SIZE);
+        moviesList.setMaxWidth(Region.USE_PREF_SIZE);
         // Set tilepane height
-        moviesContainer.setMinHeight(Region.USE_COMPUTED_SIZE);
-        moviesContainer.setPrefHeight(Region.USE_COMPUTED_SIZE);
-        moviesContainer.setMaxHeight(Region.USE_PREF_SIZE);
+        moviesList.setMinHeight(Region.USE_COMPUTED_SIZE);
+        moviesList.setPrefHeight(Region.USE_COMPUTED_SIZE);
+        moviesList.setMaxHeight(Region.USE_PREF_SIZE);
 
         displayMovies(movies);
     }
 
     public void displayMovies(List<Movie> movieList) {
         // clear tilepane
-        moviesContainer.getChildren().clear();
+        moviesList.getChildren().clear();
 
         try {
             for(Movie movie : movieList) {
@@ -107,7 +107,7 @@ public class BrowseController {
                 MovieController movieController = fxmlLoader.getController();
                 movieController.setMovieData(movie);
                 movieController.setOnSelected(this::setChosenMovie);
-                moviesContainer.getChildren().add(anchorPane);
+                moviesList.getChildren().add(anchorPane);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             }
@@ -131,7 +131,7 @@ public class BrowseController {
     @FXML
     public void searchButtonClick() {
         MovieService service = new MovieService();
-        String movieSearch = searchField.getText();
+        String movieSearch = movieSearchField.getText();
         
         search = service.searchMovies(movieSearch);
 
