@@ -2,13 +2,14 @@ package multiplex.dataclasses;
 
 public class Movie {
  
-    private int id; //Unique identifier for the movie
-    private String title; //Title of the movie
-    private int duration_min; //Duration of the movie in minutes
-    private String info; //Information about the movie
-    private String showDay; //Day for when the movie is shown
-    private String showTime; //Time for when the movie is shown
-    
+    private int id;             //Unique identifier for the movie
+    private String title;       //Title of the movie
+    private int duration_min;   //Duration of the movie in minutes
+    private String info;        //Information about the movie
+    private String showDay;     //Day for when the movie is shown
+    private String showTime;    //Time for when the movie is shown
+    private String image;       // File path for movie poster      
+
     //Constructor for the Movie class
     public Movie(int id, String title, int duration_min, String info,String showDay,String showTime){
         
@@ -46,7 +47,10 @@ public class Movie {
         return showTime;
     }
 
-    
+    public String getImage() {
+        return image;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -70,5 +74,8 @@ public class Movie {
     public void setShowTime(String showTime) {
         this.showTime = showTime;
     }
-    
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

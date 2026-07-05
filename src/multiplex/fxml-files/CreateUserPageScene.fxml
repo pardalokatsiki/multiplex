@@ -111,6 +111,7 @@
                                     <Insets top="20.0" />
                                  </VBox.margin>
                               </Button>
+                              <Label fx:id="errorLabel" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER">

@@ -33,18 +33,21 @@ public class UserService {
        
         // check user data 
         
-        if(username == null || username.trim().length() <10 ){
-            return  "Invalid Username format.";
+        if(username == null || username.trim().length() >18 ){
+            return  "Invalid Username format. Username Must Be 1 To 18 Characters Long";
         }
         
         // password must contain at least one non-capital letter, capital one, symbol 
         String passwdRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
         if(passwd == null || !passwd.matches(passwdRegex)){
-            return "Invalid password format.";
+            return "Invalid password format.\n" + 
+                   "Password Must Contain One Non-Capital Letter.\n" +
+                   "Password Must Contain One Capital Letter.\n" + 
+                   "Password Must Contain One Symbol";
         }
         
         if(email == null || !email.contains("@")){
-            return "Inavlid email format.";
+            return "Invalid email format.";
         }
          
         
@@ -94,7 +97,7 @@ public class UserService {
 
                 return loggedInUser;
             }else{
-                System.out.println("Login failed.Incorrect username or password");
+                System.out.println("Login failed. Incorrect username or password");
             }
             
         } catch (SQLException e) {
