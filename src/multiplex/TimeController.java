@@ -1,6 +1,7 @@
 package multiplex;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 
@@ -10,4 +11,12 @@ public class TimeController {
 
     @FXML
     private ToggleButton timeButton;
+
+    @FXML
+    private Label roomLabel;
+    
+    public void setRoomTime(String room, String time) {
+        roomLabel.setText(room);
+        timeButton.setText(time);
+    }
 }

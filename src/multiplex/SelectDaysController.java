@@ -1,5 +1,6 @@
 package multiplex;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -8,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -55,28 +57,17 @@ public class SelectDaysController {
     }
 
     public void initialize() {
-        // Set current user credentials
-        User user = Session.getCurrentUser();
-        userName.setText(user.getUsername());
-
-        // Set the previously selected movie
-        Movie movie = Session.getSelectedMovie();
-        selectedMovieDesc.setText(movie.getInfo());
-        selectedMovieTitle.setText(movie.getTitle());
-        
-        // TODO: change it so that the week is based on user's date instance
+        selectedMoviePane();
+        // Set the next 7 days
         Calendar cal = Calendar.getInstance();
-        int day = cal.get(Calendar.DAY_OF_WEEK);
-
-        // Set days
         ArrayList<String> days = new ArrayList<>();
-        days.add("Monday");
-        days.add("Tuesday");
-        days.add("Wednesday");
-        days.add("Thursday");
-        days.add("Friday");
-        days.add("Saturday");
-        days.add("Sunday");
+        // Date show up as Day - Number - Month, ie Sunday 02 August
+        SimpleDateFormat formatter = new SimpleDateFormat("EEEE - dd - MMMM");
+        for(int i = 0; i < 7; i++)
+        {
+            days.add(formatter.format(cal.getTime()));
+            cal.add(Calendar.DAY_OF_MONTH, 1);
+        }
 
         displayOptions(days);
     }
@@ -87,7 +78,7 @@ public class SelectDaysController {
         
         try {
             for (String option : days) {
-                // Create a loader for each movie poster
+                // Create a loader for each day instance
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("fxml-files/Day.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
@@ -102,5 +93,18 @@ public class SelectDaysController {
         catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void selectedMoviePane() {
+        // Set current user credentials
+        User user = Session.getCurrentUser();
+        userName.setText(user.getUsername());
+
+        // Set the previously selected movie
+        Movie movie = Session.getSelectedMovie();
+        selectedMovieDesc.setText(movie.getInfo());
+        selectedMovieTitle.setText(movie.getTitle());
+        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
+        selectedMoviePoster.setImage(image);
     }
 }

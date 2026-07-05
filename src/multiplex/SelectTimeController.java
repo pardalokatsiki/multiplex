@@ -1,10 +1,17 @@
 package multiplex;
 
+import java.util.ArrayList;
+
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import multiplex.dataclasses.Movie;
 import multiplex.dataclasses.User;
 
 public class SelectTimeController {
@@ -48,8 +55,53 @@ public class SelectTimeController {
     }
 
     public void initialize() {
+        selectedMoviePane();
+
+        ArrayList<String> room = new ArrayList<>();
+        ArrayList<String> time = new ArrayList<>();
+        time.add("19:00");
+        time.add("18:00");
+        time.add("16:30");
+
+        room.add("Room 01");
+        room.add("Room 02");
+        room.add("Room 03");
+
+        displayOptions(room, time);
+    }
+
+    public void displayOptions(ArrayList<String> room, ArrayList<String> time) {
+        // clear vbox
+        timeList.getChildren().clear();
+
+        try {
+            for (int i = 0; i < room.size(); i++) {
+                // Create a loader for each day instance
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("fxml-files/Time.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                TimeController timeController = fxmlLoader.getController();
+                timeController.setRoomTime(room.get(i), time.get(i));
+                timeList.getChildren().add(anchorPane);
+
+                VBox.setMargin(anchorPane, new Insets(10));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void selectedMoviePane() {
         // Set current user credentials
         User user = Session.getCurrentUser();
         userName.setText(user.getUsername());
+
+        // Set the previously selected movie
+        Movie movie = Session.getSelectedMovie();
+        selectedMovieDesc.setText(movie.getInfo());
+        selectedMovieTitle.setText(movie.getTitle());
+        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
+        selectedMoviePoster.setImage(image);
     }
 }

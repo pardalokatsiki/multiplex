@@ -11,4 +11,8 @@ public class SeatController {
 
     @FXML
     private ToggleButton seatButton;
+
+    public void setSeatButton(String seat) {
+        seatButton.setText(seat);
+    }
 }

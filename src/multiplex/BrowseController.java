@@ -61,7 +61,7 @@ public class BrowseController {
         // Set current user credentials
         User user = Session.getCurrentUser();
         userName.setText(user.getUsername());
-
+    
         // Start MovieService and get all movies from the database
         MovieService service = new MovieService();
         movies = service.getAllMovies();
