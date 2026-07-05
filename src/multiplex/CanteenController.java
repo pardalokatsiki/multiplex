@@ -1,9 +1,17 @@
 package multiplex;
 
+import java.util.ArrayList;
+
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
 import multiplex.dataclasses.User;
 
 public class CanteenController {
@@ -44,5 +52,39 @@ public class CanteenController {
         // Set current user credentials
         User user = Session.getCurrentUser();
         userName.setText(user.getUsername());
+
+        ArrayList<String> item = new ArrayList<>();
+        item.add("claribo");
+        item.add("cola");
+        item.add("fanta");
+        item.add("hotdog");
+        item.add("nachos");
+        item.add("popcorn");
+        item.add("sprite");
+        item.add("water");
+
+        displayItems(item);
+    }
+
+    public void displayItems(ArrayList<String> items) {
+        snackList.getChildren().clear();
+
+        try {
+            for (String item : items) {
+                // Create a loader for each day instance
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("fxml-files/Snack.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                SnackController snackController = fxmlLoader.getController();
+                String path = "ImagesGoHere/"+ item + ".png";
+                snackController.setSnackData(path, item);
+                snackList.getChildren().add(anchorPane);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

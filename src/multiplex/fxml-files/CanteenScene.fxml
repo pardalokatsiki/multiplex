@@ -49,7 +49,7 @@
                               <Font name="Cambria" size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="totalAmount" text="** Money Amount **" textFill="WHITE">
+                        <Label fx:id="totalAmount" text="10.00 €" textFill="WHITE">
                            <font>
                               <Font name="Cambria" size="20.0" />
                            </font>
