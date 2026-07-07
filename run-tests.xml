@@ -8,6 +8,7 @@
 
     <target name="test">
         <java classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="true">
+        <jvmarg value="-XX:+EnableDynamicAgentLoading"/>
             <classpath>
                 <pathelement location="build/classes"/>
                 <fileset dir="New_libs" includes="*.jar"/>

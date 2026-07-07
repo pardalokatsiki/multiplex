@@ -1,26 +1,54 @@
 package multiplex.test;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
+import javax.naming.spi.DirStateFactory.Result;
+
+import multiplex.serviceclasses.MovieService;
 import multiplex.serviceclasses.UserService;
 import multiplex.dataclasses.User;
 
-public class UserServiceTest {
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+public class UserServiceTest {
+    @Mock
+    private Connection mockConnection;
+    @Mock
+    private PreparedStatement mockStatement;
+    @Mock
+    private ResultSet mockResultSet;
+    
     private UserService userService;
 
-    //Arrange
+    // Arrange
     @BeforeEach
     public void setUp() {
-        userService = new UserService();
-    }
+        mockConnection = mock(Connection.class);
+        mockStatement = mock(PreparedStatement.class);
+        mockResultSet = mock(ResultSet.class);
 
+        try {
+            when(mockConnection.prepareStatement(anyString())).thenReturn(mockStatement);
+            when(mockStatement.executeQuery()).thenReturn(mockResultSet);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        userService = new UserService(mockConnection);
+    }
 
     @Test
     public void testRegisterUser_UsernameTooLong() {
-        //Act: We provide a username with more than 18 characters
+        //Act: provide a username with more than 18 characters
         String result = userService.registerUser("ThisUsernameIsWayTooLong123456", "Str0ngP@ss!", "test@test.com");
 
         //Assert: Check if the message contains the failure text
@@ -62,7 +90,6 @@ public class UserServiceTest {
         //Assert: Here we can check the exact String returned by the method
         assertEquals("Invalid email format.", result, "Must reject an email without the @ symbol.");
     }
-
 
     @Test
     public void testLoginUser_InvalidCredentials() {
