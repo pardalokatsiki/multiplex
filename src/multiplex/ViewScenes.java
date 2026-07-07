@@ -1,7 +1,8 @@
 package multiplex;
 
+// Enum to handle scene switching
 public enum ViewScenes {
-
+    // Each value corresponds to a specific page
     LOGIN("/multiplex/fxml-files/LoginPageScene.fxml", "/multiplex/css-files/loginPage.css"),
     REGISTER("/multiplex/fxml-files/CreateUserPageScene.fxml", "/multiplex/css-files/registerPage.css"),
     BROWSE("/multiplex/fxml-files/BrowseScene.fxml", "/multiplex/css-files/browsePage.css"),
@@ -15,11 +16,12 @@ public enum ViewScenes {
     private final String fxmlFile;
     private final String cssFile;
 
+    // Contrustor
     ViewScenes(String fxmlFile, String cssFile) {
         this.fxmlFile = fxmlFile;
         this.cssFile = cssFile;
     }
-
+    // Getters
     public String getFxmlFile() {
         return fxmlFile;
     }

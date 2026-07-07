@@ -26,12 +26,12 @@ public class CreateUserController {
     @FXML 
     private Label errorLabel;   
 
+    // Create new user account
     @FXML
     void createAccountClick() {
         String username = createUsername.getText();
         String password = createPass.getText();
         String email = createEmail.getText();
-        
         // Register user in database
         UserService service = new UserService();
         String message = service.registerUser(username, password, email);
@@ -45,7 +45,7 @@ public class CreateUserController {
         }
 
     }
-
+    // Go back to login page
     @FXML
     void goBackButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);

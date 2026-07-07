@@ -2,11 +2,11 @@ package multiplex.dataclasses;
 
 public class Ticket {
     
-    private int id; //Unique identifier for the ticket
-    private double price; //Price of the ticket
-    private String seatNo; //Seat number for the ticket
-    private int movieId; //ID of the movie for which the ticket is purchased
-    private int userId; //ID of the user who purchased the ticket
+    private int id;         //Unique identifier for the ticket
+    private double price;   //Price of the ticket
+    private String seatNo;  //Seat number for the ticket
+    private int movieId;    //ID of the movie for which the ticket is purchased
+    private int userId;     //ID of the user who purchased the ticket
 
     //Constructor for the Ticket class
     public Ticket(int id, double price, String seatNo, int movieId, int userId) {

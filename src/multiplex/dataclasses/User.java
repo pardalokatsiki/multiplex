@@ -2,10 +2,10 @@ package multiplex.dataclasses;
 
 public class User {
      
-    private int id; //Unique identifier for the user
-    private String username; //Username of the user
-    private String passwd; //Password of the user
-    private String email; //Email of the user
+    private int id;         //Unique identifier for the user
+    private String username;//Username of the user
+    private String passwd;  //Password of the user
+    private String email;   //Email of the user
     
     //Constructor for the User class
     public User(int id,String username,String passwd,String email){
@@ -14,8 +14,6 @@ public class User {
         this.passwd = passwd;
         this.email = email;
     }
-    
-    
     
     //Getters and Setters
 

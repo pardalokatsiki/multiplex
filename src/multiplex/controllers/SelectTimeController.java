@@ -57,7 +57,7 @@ public class SelectTimeController {
     }
 
     public void initialize() {
-        selectedMoviePane();
+        BrowseController.selectedMoviePane(userName, selectedMovieTitle, selectedMovieDesc, selectedMoviePoster);
 
         ArrayList<String> room = new ArrayList<>();
         ArrayList<String> time = new ArrayList<>();
@@ -86,24 +86,10 @@ public class SelectTimeController {
                 TimeController timeController = fxmlLoader.getController();
                 timeController.setRoomTime(room.get(i), time.get(i));
                 timeList.getChildren().add(anchorPane);
-
                 VBox.setMargin(anchorPane, new Insets(10));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void selectedMoviePane() {
-        // Set current user credentials
-        User user = Session.getCurrentUser();
-        userName.setText(user.getUsername());
-
-        // Set the previously selected movie
-        Movie movie = Session.getSelectedMovie();
-        selectedMovieDesc.setText(movie.getInfo());
-        selectedMovieTitle.setText(movie.getTitle());
-        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
-        selectedMoviePoster.setImage(image);
     }
 }

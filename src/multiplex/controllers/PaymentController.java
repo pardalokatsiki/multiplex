@@ -70,49 +70,35 @@ public class PaymentController {
     @FXML
     private Label userName;
 
+    // Continue to Payment Result page
     @FXML
     public void continueButtonClick() {
-        //MultiplexController.switchScene(ViewScenes.RESULT);
+        // Call ticket service to use database
         TicketService service = new TicketService();
-        
         Movie movie = Session.getSelectedMovie();
         User user = Session.getCurrentUser();
-        
+        // Book ticket in database
         boolean booking = service.bookTicket(movieSeat.getText(), 9.50, movie.getId(), user.getId());
-        
+        // Set booking status (true/false)
         Session.setBookTicket(booking);
         MultiplexController.switchScene(ViewScenes.RESULT);
     }
-
+    // Go back to Canteen Page
     @FXML
     public void backButtonClick() {
         MultiplexController.switchScene(ViewScenes.CANTEEN);
     }
-
+    // Logout
     @FXML
     public void logoutButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 
     public void initialize() {
-        selectedMoviePane();
-    }
-
-    public void selectedMoviePane() {
-        // Set current user credentials
-        User user = Session.getCurrentUser();
-        userName.setText(user.getUsername());
-
-        // Set the previously selected movie
-        Movie movie = Session.getSelectedMovie();
-        selectedMovieDesc.setText(movie.getInfo());
-        selectedMovieTitle.setText(movie.getTitle());
-        movieTitle.setText(movie.getTitle());
+        BrowseController.selectedMoviePane(userName, selectedMovieTitle, selectedMovieDesc, selectedMoviePoster);
+        movieTitle.setText(selectedMovieTitle.getText());
         movieDate.setText(Session.getDate());
         movieTime.setText(Session.getTime());
-        System.out.println(Session.getSeatno());
         movieSeat.setText(Session.getSeatno());
-        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
-        selectedMoviePoster.setImage(image);
     }
 }

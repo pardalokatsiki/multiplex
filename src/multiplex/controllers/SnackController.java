@@ -17,7 +17,9 @@ public class SnackController {
     private Spinner<?> snackSpinner;
 
     public void setSnackData(String snackPath, String snack) {
+        // Snack name
         snackName.setText(snack);
+        // Snack icon
         var image = new Image(getClass().getResourceAsStream(snackPath));
         snackIcon.setImage(image);
     }

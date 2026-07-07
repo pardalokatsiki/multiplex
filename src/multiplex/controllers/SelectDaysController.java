@@ -42,25 +42,27 @@ public class SelectDaysController {
     @FXML
     private Label userName;
 
+    // Logout
     @FXML
     public void logoutButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
-
+    // Continue to Select Time Page
     @FXML
     public void continueButtonClick() {
         MultiplexController.switchScene(ViewScenes.TIME);
     }
-
+    // Go back to browse page
     @FXML
     public void backButtonClick() {
         MultiplexController.switchScene(ViewScenes.BROWSE);
     }
 
     public void initialize() {
-        selectedMoviePane();
-        // Set the next 7 days
+        BrowseController.selectedMoviePane(userName, selectedMovieTitle, selectedMovieDesc, selectedMoviePoster);
+        // Get current date
         Calendar cal = Calendar.getInstance();
+        // Set the next 7 days
         ArrayList<String> days = new ArrayList<>();
         // Date show up as Day - Number - Month, ie Sunday 02 August
         SimpleDateFormat formatter = new SimpleDateFormat("EEEE - dd - MMMM");
@@ -76,7 +78,6 @@ public class SelectDaysController {
     public void displayOptions(ArrayList<String> days) {
         // clear vbox
         daysList.getChildren().clear();
-        
         try {
             for (String option : days) {
                 // Create a loader for each day instance
@@ -87,25 +88,11 @@ public class SelectDaysController {
                 DayController dayController = fxmlLoader.getController();
                 dayController.setDayButton(option);
                 daysList.getChildren().add(anchorPane);
-
                 VBox.setMargin(anchorPane, new Insets(10));
             }
         } 
         catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void selectedMoviePane() {
-        // Set current user credentials
-        User user = Session.getCurrentUser();
-        userName.setText(user.getUsername());
-
-        // Set the previously selected movie
-        Movie movie = Session.getSelectedMovie();
-        selectedMovieDesc.setText(movie.getInfo());
-        selectedMovieTitle.setText(movie.getTitle());
-        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
-        selectedMoviePoster.setImage(image);
     }
 }

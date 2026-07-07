@@ -32,7 +32,15 @@ public class MovieController {
     private ToggleButton movieTitleButton;
 
     private Movie movie;
+    // Detectes when a movie is selected
     private Consumer<Movie> onSelected;  
+    
+    // When user clicks on a movie title, it will appear on the left side
+    @FXML
+    public void movieTitleClick() {
+        if(onSelected != null)
+            onSelected.accept(movie);
+    }
     
     public void setMovieData(Movie movie) {
         //Set movie to current movie
@@ -44,12 +52,6 @@ public class MovieController {
         moviePosterBrowse.setImage(image);
     }
     
-    // When user clicks on a movie title, it will appear on the left side
-    @FXML
-    public void movieTitleClick() {
-        if(onSelected != null)
-            onSelected.accept(movie);
-    }
     
     public void setOnSelected(Consumer<Movie> onSelected) {
         this.onSelected = onSelected;

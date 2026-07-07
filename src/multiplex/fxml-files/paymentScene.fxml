@@ -261,7 +261,7 @@
                   </VBox>
                   <HBox alignment="TOP_CENTER" prefHeight="231.0" prefWidth="720.0">
                      <children>
-                        <Text fx:id="paymentErrorMsg" fill="#c10000" strokeType="OUTSIDE" strokeWidth="0.0" text="*ERROR MESSAGE I GUESS*">
+                        <Text fx:id="paymentErrorMsg" fill="#c10000" strokeType="OUTSIDE" strokeWidth="0.0">
                            <font>
                               <Font name="Comic Sans MS Bold" size="12.0" />
                            </font>

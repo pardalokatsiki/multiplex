@@ -15,6 +15,7 @@ public class SeatController {
 
     @FXML
     private void seatButtonClick() {
+        // Set seat number when user clicks on button
         String seat = seatButton.getText();
         Session.setSeatno(seat); 
     }

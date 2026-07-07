@@ -33,16 +33,17 @@ public class CanteenController {
     @FXML
     private Label userName;
 
+    // Continue to Payment page
     @FXML
     public void continueButtonClick() {
         MultiplexController.switchScene(ViewScenes.PAYMENT);
     }
-
+    // Go pack to SelectSeat page
     @FXML
     public void backButtonClick() {
         MultiplexController.switchScene(ViewScenes.SEAT);
     }
-
+    // Logout
     @FXML
     public void logoutButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
@@ -52,7 +53,7 @@ public class CanteenController {
         // Set current user credentials
         User user = Session.getCurrentUser();
         userName.setText(user.getUsername());
-
+        // Create list of canteen items
         ArrayList<String> item = new ArrayList<>();
         item.add("claribo");
         item.add("cola");
@@ -67,8 +68,8 @@ public class CanteenController {
     }
 
     public void displayItems(ArrayList<String> items) {
+        // Clear grid pane
         snackList.getChildren().clear();
-
         try {
             for (String item : items) {
                 // Create a loader for each day instance

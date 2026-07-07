@@ -14,15 +14,16 @@ public class MultiplexController {
     public static void setStage(Stage primaryStage) {
         stage = primaryStage;
     }
-
+    // Function for controllers to switch between pages
     public static void switchScene(ViewScenes view) {
         try {
+            // Get fxml file for controller
             FXMLLoader loader = new FXMLLoader(MultiplexController.class.getResource(view.getFxmlFile()));
-
             Parent root = loader.load();
             Scene scene = new Scene(root);
 
             if (view.getCssFile() != null)
+                // Get css file for controller
                 scene.getStylesheets().add(Objects.requireNonNull(MultiplexController.class.getResource(view.getCssFile()).toExternalForm()));
             stage.setScene(scene);
             stage.show();

@@ -20,16 +20,17 @@ public class PaymentResultController {
     @FXML
     private Label userName;
 
+    // Browse for a new movie
     @FXML
     public void browseAgainButton() {
         MultiplexController.switchScene(ViewScenes.BROWSE);
     }
-
+    // Logout
     @FXML
     public void logoutButtonClick() {
         MultiplexController.switchScene(ViewScenes.LOGIN);
     }
-
+    
     public void initialize() {
         // Set current user credentials
         User user = Session.getCurrentUser();

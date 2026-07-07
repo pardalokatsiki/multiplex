@@ -58,13 +58,16 @@ public class SelectSeatController {
     }
 
     public void initialize() {
-        selectedMoviePane();
+        BrowseController.selectedMoviePane(userName, selectedMovieTitle, selectedMovieDesc, selectedMoviePoster);
+
         int columns = 9;
         int rows = 9;
         ArrayList<String> seats = new ArrayList<>();
 
         for (int i = 0; i < rows; i++) {
+            // Seat option A - I
             char temp = (char) +('A' + i);
+            // Seat number 1 - 9
             for (int j = 0; j < columns; j++) {
                 seats.add(temp + "" + (j + 1));
             }
@@ -75,7 +78,6 @@ public class SelectSeatController {
     public void displayOptions(ArrayList<String> seats) {
         // clear vbox
         seatList.getChildren().clear();
-
         try {
             for (String seat : seats) {
                 // Create a loader for each day instance
@@ -86,24 +88,10 @@ public class SelectSeatController {
                 SeatController seatController = fxmlLoader.getController();
                 seatController.setSeatButton(seat);
                 seatList.getChildren().add(anchorPane);
-
                 VBox.setMargin(anchorPane, new Insets(10));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void selectedMoviePane() {
-        // Set current user credentials
-        User user = Session.getCurrentUser();
-        userName.setText(user.getUsername());
-
-        // Set the previously selected movie
-        Movie movie = Session.getSelectedMovie();
-        selectedMovieDesc.setText(movie.getInfo());
-        selectedMovieTitle.setText(movie.getTitle());
-        var image = new Image(getClass().getResourceAsStream(movie.getImage()));
-        selectedMoviePoster.setImage(image);
     }
 }
