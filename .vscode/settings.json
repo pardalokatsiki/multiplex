@@ -26,6 +26,22 @@
         "/home/nyx/School/Semester_6/Software_Engineering/Project/multiplex/lib/mysql-connector-j-9.7.0.jar",
         "/home/nyx/School/Semester_6/Software_Engineering/Project/multiplex/lib/javafx.swing.jar",
         "/home/nyx/School/Semester_6/Software_Engineering/Project/multiplex/lib/mockito-junit-jupiter-5.23.0.jar",
-        "/home/nyx/School/Semester_6/Software_Engineering/Project/multiplex/lib/objenesis-3.3.jar"
+        "/home/nyx/School/Semester_6/Software_Engineering/Project/multiplex/lib/objenesis-3.3.jar",
+        "c:\\Users\\anmal\\Downloads\\mockito-core-5.23.0.jar",
+        "c:\\Users\\anmal\\Downloads\\byte-buddy-1.17.7.jar",
+        "c:\\Users\\anmal\\Downloads\\byte-buddy-agent-1.17.7.jar",
+        "c:\\Users\\anmal\\Downloads\\objenesis-3.3.jar",
+        "c:\\Users\\anmal\\Downloads\\junit-platform-console-standalone-6.1.1.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.base.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.controls.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.fxml.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.graphics.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.media.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.swing.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx.web.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\javafx-swt.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\jdk.jsobject.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\jfx.incubator.input.jar",
+        "c:\\Users\\anmal\\Downloads\\openjfx-25.0.3_windows-x64_bin-sdk\\javafx-sdk-25.0.3\\lib\\jfx.incubator.richtext.jar"
     ]
 }
