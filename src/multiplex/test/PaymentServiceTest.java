@@ -1,4 +1,4 @@
-package multiplex.test.serviceclasses;
+package multiplex.test;
 
 import multiplex.serviceclasses.PaymentService;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +15,7 @@ class PaymentServiceTest {
         paymentService = new PaymentService();
     }
 
-    // Test successful payment
+    //Test successful payment
     @Test
     void testProcessPayment_Success() {
         boolean result = paymentService.processPayment(
@@ -27,7 +27,7 @@ class PaymentServiceTest {
         assertTrue(result);
     }
 
-    // Null input tests
+    //Null input tests
 
     @Test
     void testProcessPayment_NullCardNumber() {
@@ -108,7 +108,7 @@ class PaymentServiceTest {
         assertFalse(result);
     }
 
-    // Invalid CVV tests
+    //Invalid CVV tests
 
     @Test
     void testProcessPayment_CVVTooShort() {
@@ -143,7 +143,7 @@ class PaymentServiceTest {
         assertFalse(result);
     }
 
-    // Empty string tests
+    //Empty string tests
 
     @Test
     void testProcessPayment_EmptyCardNumber() {

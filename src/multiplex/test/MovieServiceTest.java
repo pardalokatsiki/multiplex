@@ -1,38 +1,53 @@
 package multiplex.test;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 import multiplex.dataclasses.Movie;
-import multiplex.serviceclasses.MovieService; // Προστέθηκε αυτό για να "βλέπει" το Service
+import multiplex.serviceclasses.MovieService;
 
 public class MovieServiceTest {
 
+    //Declare the service at the class level
+    private MovieService service;
+
+    //This method runs automatically before each @Test!
+    @BeforeEach
+    public void setUp() {
+        service = new MovieService();
+    }
+
     @Test
     public void testGetAllMovies() {
-        MovieService service = new MovieService();
+        
+        //ACT
         List<Movie> movies = service.getAllMovies();
 
-        assertNotNull(movies, "Η λίστα των ταινιών δεν πρέπει να είναι null.");
-        assertFalse(movies.isEmpty(), "Η λίστα δεν πρέπει να είναι άδεια.");
+        //ASSERT: Check the results
+        assertNotNull(movies, "The movie list should not be null.");
+        assertFalse(movies.isEmpty(), "The list should not be empty.");
     }
 
     @Test
     public void testSearchMovies_ExistingKeyword() {
-        MovieService service = new MovieService();
+        //ACT
         List<Movie> movies = service.searchMovies("a");
 
+        //ASSERT
         assertNotNull(movies);
-        assertFalse(movies.isEmpty(), "Η αναζήτηση για 'a' θα έπρεπε να επιστρέψει αποτελέσματα.");
+        assertFalse(movies.isEmpty(), "Searching for 'a' should return results.");
+        assertTrue(movies.get(0).getTitle().toLowerCase().contains("a"), "The title must contain 'a'.");
     }
 
     @Test
     public void testSearchMovies_NonExistingKeyword() {
-        MovieService service = new MovieService();
+        //ACT
         List<Movie> movies = service.searchMovies("Zebra999xyz");
 
+        //ASSERT
         assertNotNull(movies);
-        assertTrue(movies.isEmpty(), "Η αναζήτηση για ανύπαρκτη ταινία πρέπει να επιστρέφει άδεια λίστα.");
+        assertTrue(movies.isEmpty(), "Searching for a non-existent movie should return an empty list.");
     }
 }
