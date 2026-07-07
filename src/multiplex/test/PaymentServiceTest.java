@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PaymentServiceTest {
-
+    
     private PaymentService paymentService;
-
+    
     @BeforeEach
     void setUp() {
         paymentService = new PaymentService();
     }
-
+    
     //Test successful payment
     @Test
     void testProcessPayment_Success() {

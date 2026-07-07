@@ -8,9 +8,14 @@ public class TicketService {
     private Connection connection;
 
     public TicketService() {
-        this.connection = DBConnection.getConnection(); //establishing a connection to the database using the DBConnection class
+        //establishing a connection to the database using the DBConnection class
+        this.connection = DBConnection.getConnection(); 
     }
     
+    public TicketService(Connection connection) {
+        this.connection = connection; 
+    }
+
     //Purchase ticket method, this method will insert a new ticket into the Tickets table in the database and return true if the insertion was successful, otherwise it will return false
     public boolean bookTicket(String seatNo, double price, int movieId, int userId) {
         String query = "INSERT INTO Tickets (seat_no, price, movies_id, users_id) VALUES (?, ?, ?, ?)"; //SQL query to insert a new ticket into the Tickets table, using ? to prevent SQL injection
