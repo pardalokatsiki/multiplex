@@ -16,6 +16,7 @@ import multiplex.serviceclasses.MovieService;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class MovieServiceTest {
@@ -27,12 +28,12 @@ public class MovieServiceTest {
     private MovieService service;
 
     @BeforeEach
-    public void setUp() throws SQLException {
+    public void setUp() throws SQLException{
         MockitoAnnotations.openMocks(this);
         
         when(mockConnection.prepareStatement(anyString())).thenReturn(mockStatement);
         when(mockStatement.executeQuery()).thenReturn(mockResultSet);
-        
+
         service = new MovieService(mockConnection);
     }
 
@@ -41,12 +42,12 @@ public class MovieServiceTest {
         // Πρέπει να "κοροϊδέψουμε" τη βάση ότι βρήκε 1 ταινία για να περάσει το assertFalse(isEmpty)
         when(mockResultSet.next()).thenReturn(true, false); 
         when(mockResultSet.getInt("id")).thenReturn(1);
-        when(mockResultSet.getString("title")).thenReturn("a test movie");
+        when(mockResultSet.getString("title")).thenReturn("The Matrix");
         when(mockResultSet.getInt("duration_min")).thenReturn(120);
         when(mockResultSet.getString("info")).thenReturn("info");
         when(mockResultSet.getString("showday")).thenReturn("Monday");
         when(mockResultSet.getString("showtime")).thenReturn("20:00");
-
+        //ACT
         List<Movie> movies = service.getAllMovies();
 
         assertNotNull(movies, "The movie list should not be null.");
