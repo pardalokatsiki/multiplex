@@ -35,6 +35,12 @@
             "request": "launch",
             "mainClass": "multiplex.MultiplexView",
             "vmArgs": "--module-path ${env:PATH_TO_FX} --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "multiplex.test.MultiplexControllerTest"
         }
     ]
 }
