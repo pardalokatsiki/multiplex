@@ -37,9 +37,9 @@ public class PaymentResultController {
         userName.setText(user.getUsername());
 
         if(Session.isBookTicket()) {
-            paymentMessage.setText("Payment Successful. We Hope You Enjoy Your Cinematic Experience!");
+            paymentMessage.setText("Booking Successful. We Hope You Enjoy Your Cinematic Experience!");
         } else {
-            paymentMessage.setText("Payment Not Successful. Please Revisit Your Input Details");
+            paymentMessage.setText("Booking Not Successful. Please Revisit Your Input Details");
         }
     }
 }

@@ -1,18 +1,21 @@
 package multiplex.controllers;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import multiplex.Session;
 import multiplex.ViewScenes;
 import multiplex.dataclasses.Movie;
 import multiplex.dataclasses.User;
+import multiplex.serviceclasses.PaymentService;
 import multiplex.serviceclasses.TicketService;
 
 public class PaymentController {
@@ -79,9 +82,14 @@ public class PaymentController {
         User user = Session.getCurrentUser();
         // Book ticket in database
         boolean booking = service.bookTicket(movieSeat.getText(), 9.50, movie.getId(), user.getId());
-        // Set booking status (true/false)
-        Session.setBookTicket(booking);
-        MultiplexController.switchScene(ViewScenes.RESULT);
+        // Validate payment values
+        boolean validation = validatePurchase();
+        if(validation) {
+            Session.setBookTicket(booking);
+            MultiplexController.switchScene(ViewScenes.RESULT);
+        } else if(!validation) {
+            paymentErrorMsg.setText("Payment Failed. Check Inputs");
+        }
     }
     // Go back to Canteen Page
     @FXML
@@ -100,5 +108,16 @@ public class PaymentController {
         movieDate.setText(Session.getDate());
         movieTime.setText(Session.getTime());
         movieSeat.setText(Session.getSeatno());
+    }
+
+    public Boolean validatePurchase() {
+        PaymentService service = new PaymentService();
+        String cardno = cardNumber.getText();
+        String holderName = ownerOfCardField.getText();
+        LocalDate date = expiryDate.getValue();
+        String cardDate = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        String cvv = cvvField.getText();
+        boolean state = service.processPayment(cardno, holderName, cardDate, cvv);
+        return state;
     }
 }
