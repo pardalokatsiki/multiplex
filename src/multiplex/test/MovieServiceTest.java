@@ -2,13 +2,25 @@ package multiplex.test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 import multiplex.dataclasses.Movie;
 import multiplex.serviceclasses.MovieService;
 
 public class MovieServiceTest {
+    // Mock the Java SQL Connection
+    @Mock
+    private Connection mockConnection;
+    // Mock the SQL Statement 
+    @Mock
+    private PreparedStatement mockStatement;
 
     //Declare the service at the class level
     private MovieService service;
@@ -16,7 +28,8 @@ public class MovieServiceTest {
     //This method runs automatically before each @Test!
     @BeforeEach
     public void setUp() {
-        service = new MovieService();
+        MockitoAnnotations.openMocks(this);
+        service = new MovieService(mockConnection);
     }
 
     @Test

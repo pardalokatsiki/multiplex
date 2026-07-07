@@ -14,6 +14,9 @@ public class MovieService {
         this.connection = DBConnection.getConnection(); //establishing a connection to the database using the DBConnection class
     }
 
+    public MovieService(Connection connection) {
+        this.connection = connection;}
+
     //Method to search for movies, this method will search for movies in the database that match the given keyword in their title and return a list of Movie objects that match the search criteria
     public List<Movie> searchMovies(String keyword) {
         List<Movie> moviesList = new ArrayList<>();

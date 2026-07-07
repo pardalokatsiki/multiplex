@@ -1,6 +1,5 @@
 package multiplex.test;
 
-import multiplex.dbconnection.DBConnection;
 import multiplex.serviceclasses.TicketService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,11 +7,8 @@ import java.sql.SQLException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
