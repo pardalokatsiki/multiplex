@@ -85,14 +85,14 @@
                   </Label>
                </children>
             </VBox>
-            <VBox alignment="CENTER">
+            <VBox alignment="CENTER" prefWidth="1080.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="0.0" prefWidth="694.0" text="Did you know?" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="850.0" text="Have you ever had a dream that, that you, um, you had, your, you- you could, you'll do, you- you wants, you, you could do so, you- you'll do, you could- you, you want, you want them to do you so much you could do anything?" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Comic Sans MS" size="14.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="0.0" prefWidth="694.0" text="Bananas are in fact... berries!" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="0.0" prefWidth="694.0" text="- Dream Kid" textAlignment="CENTER">
                      <font>
                         <Font name="Comic Sans MS" size="14.0" />
                      </font>

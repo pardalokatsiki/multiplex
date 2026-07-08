@@ -110,12 +110,15 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="TOP_CENTER" prefWidth="1080.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" prefWidth="1080.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <Label fx:id="errorLabel" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="190.0" prefWidth="817.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                        <Label fx:id="errorLabel" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="131.0" prefWidth="818.0" textAlignment="CENTER" textFill="RED" wrapText="true">
                            <font>
                               <Font size="14.0" />
                            </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
@@ -128,7 +131,7 @@
                         <Font name="Comic Sans MS" size="14.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="10.0" prefWidth="694.0" text="Strawberries have a higher concentration of vitamin C compared to oranges!" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="10.0" prefWidth="694.0" text="Bananas are in fact berries, while strawberries... are not!" textAlignment="CENTER">
                      <font>
                         <Font name="Comic Sans MS" size="14.0" />
                      </font>
