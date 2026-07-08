@@ -7,17 +7,11 @@
     -fx-background-color:"#ffa5ab";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
-    -fx-font-size:16px;
-    -fx-font-family: "Comic Sans MS";
 }
 
 #createAccountButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#da627d";
-    -fx-font-family: "Comic Sans MS";
-    -fx-font-weight: bold;
-    -fx-font-size:16px;
-    -fx-font-family: "Comic Sans MS";
 }
 
 #createUsername{
@@ -48,17 +42,11 @@
     -fx-background-color:"#ffa5ab";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
-    -fx-font-size:16px;
-    -fx-font-family: "Comic Sans MS";
 }
 
 #backToLoginButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#da627d";
-    -fx-font-family: "Comic Sans MS";
-    -fx-font-weight: bold;
-    -fx-font-size:16px;
-    -fx-font-family: "Comic Sans MS";
 }
 
 #errorLabel{

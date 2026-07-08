@@ -7,17 +7,11 @@
     -fx-background-color:"#f9dbbd";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
-    -fx-font-family: "Comic Sans MS";
-    -fx-font-size:16px;
 }
 
 #loginButton:hover{
     -fx-cursor: hand;
-    -fx-background-color: "#FCDFC0";
-    -fx-font-family: "Comic Sans MS";
-    -fx-font-weight: bold;
-    -fx-font-family: "Comic Sans MS";
-    -fx-font-size:16px;
+    -fx-background-color: "#e0c5aa";
 }
 
 #registerLink{

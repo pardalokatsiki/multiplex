@@ -34,7 +34,7 @@
                      <children>
                         <ImageView fitHeight="172.0" fitWidth="397.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Downloads/SuperiorArt.png" />
+                              <Image url="@../ImagesGoHere/cart.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="200.0" />
