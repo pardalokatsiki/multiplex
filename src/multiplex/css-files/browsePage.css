@@ -37,7 +37,6 @@
 #ticketButton{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
-    -fx-font-family: "Comic Sans MS";
 }
 
 #ticketButton:hover{
@@ -59,13 +58,11 @@
 #searchButton{
     -fx-background-color:"#e6959a";
     -fx-background-radius: 100px;
-    -fx-font-family: "Comic Sans MS";
 }
 
 #searchButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-    -fx-font-family: "Comic Sans MS";
 }
 
 .searchbox{

@@ -180,13 +180,16 @@
                               <Insets left="70.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox prefHeight="47.0" prefWidth="720.0" />
-                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="60.0">
+                        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="720.0" />
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="26.0" prefWidth="126.0" text="Card number">
+                              <Label prefHeight="36.0" prefWidth="190.0" text="Card number">
                                  <font>
                                     <Font name="Comic Sans MS" size="18.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                               </Label>
                               <TextField fx:id="cardNumber" prefHeight="46.0" prefWidth="218.0" promptText="XXXXXXXXXXXXXXXX" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
                                  <HBox.margin>
@@ -200,13 +203,22 @@
                                  </padding>
                               </TextField>
                            </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="3.0" top="5.0" />
+                           </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="26.0" prefWidth="173.0" text="Expiration Date &amp; CVV">
+                              <Label prefHeight="36.0" prefWidth="190.0" text="Expiration Date &amp; CVV">
                                  <font>
-                                    <Font name="Comic Sans MS" size="16.0" />
+                                    <Font name="Comic Sans MS" size="18.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                               </Label>
                               <DatePicker fx:id="expiryDate" prefHeight="37.0" prefWidth="150.0" styleClass="custom-date-picker" stylesheets="@../css-files/paymentPage.css">
                                  <HBox.margin>
@@ -216,19 +228,28 @@
                                     <Insets left="6.0" />
                                  </padding>
                               </DatePicker>
-                              <PasswordField fx:id="cvvField" alignment="CENTER" prefHeight="34.0" prefWidth="60.0" promptText="YYY" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
+                              <PasswordField fx:id="cvvField" alignment="CENTER" prefHeight="46.0" prefWidth="60.0" promptText="YYY" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
                                  <font>
                                     <Font name="Comic Sans MS" size="14.0" />
                                  </font>
                               </PasswordField>
                            </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="5.0">
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="36.0" prefWidth="182.0" text="Name/owner of card" wrapText="true">
+                              <Label prefHeight="36.0" prefWidth="190.0" text="Name/owner of card">
                                  <font>
                                     <Font name="Comic Sans MS" size="18.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                               </Label>
                               <TextField fx:id="ownerOfCardField" prefHeight="34.0" prefWidth="218.0" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
                                  <padding>
@@ -239,13 +260,22 @@
                                  </font>
                               </TextField>
                            </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="97.0">
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="26.0" prefWidth="90.0" text="e-Μail">
+                              <Label prefHeight="36.0" prefWidth="190.0" text="e-Μail">
                                  <font>
                                     <Font name="Comic Sans MS" size="18.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                               </Label>
                               <TextField fx:id="emailConfirmField" prefHeight="33.0" prefWidth="219.0" styleClass="labelbox">
                                  <padding>
@@ -256,6 +286,12 @@
                                  </font>
                               </TextField>
                            </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
