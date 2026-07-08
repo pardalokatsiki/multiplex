@@ -8,12 +8,12 @@
 
 <AnchorPane fx:id="movieContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="346.0" stylesheets="@../css-files/movieContainer.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.controllers.MovieController">
    <children>
-      <StackPane fx:id="imageBorder" layoutX="42.0" layoutY="22.0" prefHeight="324.0" prefWidth="262.0">
+      <StackPane fx:id="imageBorder" layoutX="52.0" layoutY="24.0" prefHeight="324.0" prefWidth="239.0">
          <children>
-            <ImageView fx:id="moviePosterBrowse" fitHeight="313.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="moviePosterBrowse" fitHeight="303.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </StackPane>
-      <ToggleButton fx:id="movieTitleButton" layoutX="47.0" layoutY="354.0" mnemonicParsing="false" onAction="#movieTitleClick" prefHeight="9.0" prefWidth="251.0" text="* Movie Title *">
+      <ToggleButton fx:id="movieTitleButton" layoutX="45.0" layoutY="356.0" mnemonicParsing="false" onAction="#movieTitleClick" prefHeight="46.0" prefWidth="253.0" text="* Movie Title *">
          <font>
             <Font size="14.0" />
          </font>
