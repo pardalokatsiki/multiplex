@@ -60,7 +60,7 @@ public class UserServiceTest {
     public void testRegisterUser_NullUsername() {
         //ACT
         //Attempt to register a user with a null username.
-        String result = userService.registerUser(null, "Str0ngP@ss!", "test@test.com");
+        String result = userService.registerUser("", "Str0ngP@ss!", "test@test.com");
 
         //ASSERT
         assertTrue(result.contains("Invalid Username format"), "Must reject a null username.");
