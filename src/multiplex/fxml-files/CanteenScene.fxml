@@ -20,7 +20,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" styleClass="color4">
                      <children>
-                        <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="40.0" prefWidth="120.0" text="Logout" textFill="#450920">
+                        <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="40.0" prefWidth="120.0" text="Log out" textFill="#450920">
                            <font>
                               <Font name="Comic Sans MS" size="18.0" />
                            </font>
