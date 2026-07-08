@@ -1,11 +1,14 @@
 .root{
     -fx-background-color:"#f9dbbd";
+    -fx-font-family: "Comic Sans MS";
 }
 
 #createAccountButton{
     -fx-background-color:"#ffa5ab";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #createAccountButton:hover{
@@ -13,30 +16,40 @@
     -fx-background-color: "#da627d";
     -fx-font-family: "Comic Sans MS";
     -fx-font-weight: bold;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #createUsername{
     -fx-background-color: "FFE7E3";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #createEmail{
     -fx-background-color: "FFE7E3";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #createPass{
     -fx-background-color: "FFE7E3";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #backToLoginButton{
     -fx-background-color:"#ffa5ab";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #backToLoginButton:hover{
@@ -44,4 +57,11 @@
     -fx-background-color: "#da627d";
     -fx-font-family: "Comic Sans MS";
     -fx-font-weight: bold;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
+}
+
+#errorLabel{
+    -fx-font-size:14px;
+    -fx-font-family: "Comic Sans MS";
 }
