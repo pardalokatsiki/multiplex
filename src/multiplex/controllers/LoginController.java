@@ -37,13 +37,15 @@ public class LoginController {
 
         // Username field shouldn't be empty and at most 18 characters long
         // Password field shouldn't be empty and at least 8 characters long
-        if ((!name.isEmpty() && name.length() <= 18)
-                && (!pwd.isEmpty() && pwd.length() >= 8)) {
+        if (name.isEmpty() || name.length() > 18) {
+            errorLabel.setText("Username Must Be 1-18 Characters Long.");
+        } else if (pwd.isEmpty() || pwd.length() < 8) {
+            errorLabel.setText("Password Must Be At Least 8 Characters Long.");
+        } else {
             // Check if user exists in the database
             UserService check = new UserService();
             // returns user if succesful, null if not
-            User user = check.loginUser(name, pwd);
-
+            User user = check.loginUser(name, pwd);          
             if (user != null) {
                 // Move to Browse Page Scene
                 Session.setCurrentUser(user);
@@ -51,9 +53,6 @@ public class LoginController {
             }
             // user = null
             errorLabel.setText("Login failed. Username With That Password Not Found\n");
-        } else {
-            errorLabel.setText("Username Must Be 1-18 Characters Long.\n" +
-            "Password Must Be At Least 8 Characters Long.");
         }
     }
 

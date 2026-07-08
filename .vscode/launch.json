@@ -3,44 +3,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "TicketService",
-            "request": "launch",
-            "mainClass": "multiplex.serviceclasses.TicketService",
-            "projectName": "multiplex_259263ac"
-        },
-        {
-            "type": "java",
-            "name": "UserService",
-            "request": "launch",
-            "mainClass": "multiplex.serviceclasses.UserService",
-            "projectName": "multiplex_259263ac"
-        },
-        {
-            "type": "java",
-            "name": "MovieService",
-            "request": "launch",
-            "mainClass": "multiplex.serviceclasses.MovieService",
-            "projectName": "multiplex_259263ac"
-        },
-        {
-            "type": "java",
-            "name": "MovieService",
-            "request": "launch",
-            "mainClass": "multiplex.serviceclasses.MovieService",
-            "projectName": "multiplex_408d0b0d"
-        },
-        {
-            "type": "java",
             "name": "Launch View",
             "request": "launch",
             "mainClass": "multiplex.MultiplexView",
             "vmArgs": "--module-path ${env:PATH_TO_FX} --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "Launch Test",
-            "request": "launch",
-            "mainClass": "multiplex.test.MultiplexControllerTest"
         }
     ]
 }

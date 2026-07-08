@@ -32,13 +32,14 @@ public class UserService {
     //Method to register a new user, this method will insert a new user into the Users table in the database and return true if the insertion was successful, otherwise it will return false
     public String registerUser(String username, String passwd, String email) {
         
-       
         // check user data 
-        
-        if(username == null || username.trim().length() >18 ){
+        if(username.trim().isEmpty() || username.trim().length() > 18 ){
             return  "Invalid Username format. Username Must Be 1 To 18 Characters Long";
         }
-        
+        // email field must contain text and the @ symbol   
+        if(email == null || !email.contains("@")){
+            return "Invalid email format.";
+        }
         // password must contain at least one non-capital letter, capital one, symbol 
         String passwdRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
         if(passwd == null || !passwd.matches(passwdRegex)){
@@ -47,12 +48,6 @@ public class UserService {
                    "Password Must Contain One Capital Letter.\n" + 
                    "Password Must Contain One Symbol";
         }
-        
-        if(email == null || !email.contains("@")){
-            return "Invalid email format.";
-        }
-         
-        
         
         String query = "INSERT INTO Users (username, passwd, email) VALUES (?, ?, ?)"; //SQL query to insert a new user into the Users table, using ? to prevent SQL injection
         

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="RunTests" default="test" basedir=".">
-    <!-- Ρυθμίσεις για το πού βρίσκεται ο κώδικάς σου -->
     <property name="src.dir" value="src"/>
-    <!-- Το NetBeans συνήθως φτιάχνει τον φάκελο build/classes για τα compiled αρχεία -->
     <property name="build.dir" value="build/classes/multiplex"/>
     <property name="lib.dir" value="lib"/>
 
