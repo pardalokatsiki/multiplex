@@ -9,7 +9,6 @@ public enum ViewScenes {
     DAY("/multiplex/fxml-files/SelectDaysScene.fxml", "/multiplex/css-files/selectDays.css"),
     TIME("/multiplex/fxml-files/SelectTimeScene.fxml", "/multiplex/css-files/selectTime.css"),
     SEAT("/multiplex/fxml-files/SelectSeatScene.fxml", "/multiplex/css-files/selectSeat.css"),
-    CANTEEN("/multiplex/fxml-files/CanteenScene.fxml", "/multiplex/css-files/canteenPage.css"),
     PAYMENT("/multiplex/fxml-files/paymentScene.fxml", "/multiplex/css-files/paymentPage.css"),
     RESULT("/multiplex/fxml-files/PaymentResultScene.fxml", "/multiplex/css-files/paymentResult.css");
 

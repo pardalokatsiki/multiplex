@@ -43,10 +43,12 @@ public class UserService {
         // password must contain at least one non-capital letter, capital one, symbol 
         String passwdRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
         if(passwd == null || !passwd.matches(passwdRegex)){
-            return "Invalid password format.\n" + 
-                   "Password Must Contain One Non-Capital Letter.\n" +
-                   "Password Must Contain One Capital Letter.\n" + 
-                   "Password Must Contain One Symbol";
+            return "Invalid password format. Password Must:\n" +
+                   "Be At Least 8 Chracters\n" + 
+                   "Contain One Non-Capital Letter.\n" +
+                   "Contain One Capital Letter.\n" + 
+                   "Contain One Symbol\n" +
+                   "Contain One Number";
         }
         
         String query = "INSERT INTO Users (username, passwd, email) VALUES (?, ?, ?)"; //SQL query to insert a new user into the Users table, using ? to prevent SQL injection

@@ -94,7 +94,7 @@ public class PaymentController {
     // Go back to Canteen Page
     @FXML
     public void backButtonClick() {
-        MultiplexController.switchScene(ViewScenes.CANTEEN);
+        MultiplexController.switchScene(ViewScenes.SEAT);
     }
     // Logout
     @FXML
