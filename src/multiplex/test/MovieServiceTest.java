@@ -19,27 +19,35 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+//We use Mockito to isolate the service layer from the database layer.
+//This ensures our tests do not require an active database connection.
 public class MovieServiceTest {
     
+    //Mocking the JDBC API interfaces to prevent actual network/database calls.
     @Mock private Connection mockConnection;
     @Mock private PreparedStatement mockStatement;
     @Mock private ResultSet mockResultSet;
     
+    //The instance of the class we are actually testing
     private MovieService service;
 
+    //The setUp method runs automatically before each individual @Test.
     @BeforeEach
     public void setUp() throws SQLException{
-        MockitoAnnotations.openMocks(this);
         
-        when(mockConnection.prepareStatement(anyString())).thenReturn(mockStatement);
-        when(mockStatement.executeQuery()).thenReturn(mockResultSet);
+        MockitoAnnotations.openMocks(this); //Initializes variables annotated with @Mock
+        
+        when(mockConnection.prepareStatement(anyString())).thenReturn(mockStatement); //When the service asks the connection for a PreparedStatement, return our mockStatement.
+        when(mockStatement.executeQuery()).thenReturn(mockResultSet); //When the service executes the query, return our mockResultSet.
 
-        service = new MovieService(mockConnection);
+        service = new MovieService(mockConnection); //Pass the mocked connection into our service
     }
 
     @Test
     public void testGetAllMovies() throws SQLException {
-        // Πρέπει να "κοροϊδέψουμε" τη βάση ότι βρήκε 1 ταινία για να περάσει το assertFalse(isEmpty)
+        //ARRANGE
+        //Configure the mockResultSet to simulate a database returning exactly one row.
+        //next() will return 'true' the first time (row exists), and 'false' the second time (end of results).
         when(mockResultSet.next()).thenReturn(true, false); 
         when(mockResultSet.getInt("id")).thenReturn(1);
         when(mockResultSet.getString("title")).thenReturn("The Matrix");
@@ -47,16 +55,21 @@ public class MovieServiceTest {
         when(mockResultSet.getString("info")).thenReturn("info");
         when(mockResultSet.getString("showday")).thenReturn("Monday");
         when(mockResultSet.getString("showtime")).thenReturn("20:00");
+
         //ACT
+        //Execute the method under test
         List<Movie> movies = service.getAllMovies();
 
+        //ASSERT
+        //Verify that the service correctly processed the mocked database result
         assertNotNull(movies, "The movie list should not be null.");
         assertFalse(movies.isEmpty(), "The list should not be empty.");
     }
 
     @Test
     public void testSearchMovies_ExistingKeyword() throws SQLException {
-        // Εξομοιώνουμε ότι βρέθηκε μια ταινία που περιέχει το 'a'
+        //ARRANGE
+        //Simulate finding a movie that contains the target keyword ('a')
         when(mockResultSet.next()).thenReturn(true, false);
         when(mockResultSet.getInt("id")).thenReturn(2);
         when(mockResultSet.getString("title")).thenReturn("avatar");
@@ -65,8 +78,10 @@ public class MovieServiceTest {
         when(mockResultSet.getString("showday")).thenReturn("Tuesday");
         when(mockResultSet.getString("showtime")).thenReturn("18:00");
 
+        //ACT
         List<Movie> movies = service.searchMovies("a");
 
+        //ASSERT
         assertNotNull(movies);
         assertFalse(movies.isEmpty(), "Searching for 'a' should return results.");
         assertTrue(movies.get(0).getTitle().toLowerCase().contains("a"), "The title must contain 'a'.");
@@ -74,11 +89,14 @@ public class MovieServiceTest {
 
     @Test
     public void testSearchMovies_NonExistingKeyword() throws SQLException {
-        // Εδώ θέλουμε να είναι άδεια, άρα το next() επιστρέφει false κατευθείαν
+        //ARRANGE
+        //We expect an empty result for a non-existent keyword.
         when(mockResultSet.next()).thenReturn(false);
 
+        //ACT
         List<Movie> movies = service.searchMovies("Zebra999xyz");
 
+        //ASSERT
         assertNotNull(movies);
         assertTrue(movies.isEmpty(), "Searching for a non-existent movie should return an empty list.");
     }
