@@ -47,7 +47,7 @@
                         </ImageView>
                         <Label fx:id="movieDesc" alignment="CENTER" prefHeight="226.0" prefWidth="340.0" text="*Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie *" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font name="Cambria" size="15.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
                      </children>
