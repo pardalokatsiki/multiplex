@@ -1,5 +1,6 @@
 .root{
     -fx-background-color:"#008000";
+    -fx-font-family: "Comic Sans MS";
 }
 
 .color0{
@@ -22,83 +23,89 @@
     -fx-background-color:"#450920";
 }
 
+#selectedMovieTitle{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 26px;
+}
+
+#selectedMovieDesc{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18px;
+}
+
 #logoutButton{
     -fx-background-color:"#da627d";
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #logoutButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#a53860";
+    -fx-font-family: "Comic Sans MS";
 }
 
 #confirmButton1, #backButton1{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #confirmButton1:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-
+    -fx-font-family: "Comic Sans MS";
 }
 
 #backButton1:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-
+    -fx-font-family: "Comic Sans MS";
 }
 
 #confirmButton2, #backButton2{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #confirmButton2:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-
+    -fx-font-family: "Comic Sans MS";
 }
 
 #backButton2:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-
+    -fx-font-family: "Comic Sans MS";
 }
 
 #confirmButton3, #backButton3{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #confirmButton3:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-
+    -fx-font-family: "Comic Sans MS";
 }
 
 #backButton3:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
-
+    -fx-font-family: "Comic Sans MS";
 }
 
-#searchButton{
-    -fx-background-color:"#e6959a";
-    -fx-background-radius: 100px;
-}
-
-#searchButton:hover{
-    -fx-cursor: hand;
-    -fx-background-color: "#cc8489";
-}
-
-.searchbox{
+.labelbox{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 .transparent{

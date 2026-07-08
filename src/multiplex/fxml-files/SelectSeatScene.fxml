@@ -36,7 +36,7 @@
                      <children>
                         <Label fx:id="selectedMovieTitle" alignment="CENTER" prefHeight="50.0" prefWidth="360.0" text="* Movie Title *" textFill="WHITE">
                            <font>
-                              <Font name="Cambria" size="24.0" />
+                              <Font name="Cambria" size="26.0" />
                            </font>
                         </Label>
                         <ImageView fx:id="selectedMoviePoster" fitHeight="313.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
@@ -46,7 +46,7 @@
                         </ImageView>
                         <Label fx:id="selectedMovieDesc" alignment="CENTER" prefHeight="226.0" prefWidth="340.0" text="*Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie *" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font name="Cambria" size="14.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
                      </children>
@@ -74,7 +74,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="720.0" styleClass="color0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="300.0" styleClass="searchbox">
+                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="300.0" styleClass="labelbox">
                            <HBox.margin>
                               <Insets bottom="10.0" top="28.0" />
                            </HBox.margin>

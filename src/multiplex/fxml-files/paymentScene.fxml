@@ -38,7 +38,7 @@
                      <children>
                         <Label fx:id="selectedMovieTitle" alignment="CENTER" prefHeight="50.0" prefWidth="360.0" text="* Movie Title *" textFill="WHITE">
                            <font>
-                              <Font name="Cambria" size="24.0" />
+                              <Font name="Cambria" size="26.0" />
                            </font>
                         </Label>
                         <ImageView fx:id="selectedMoviePoster" fitHeight="313.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
@@ -48,7 +48,7 @@
                         </ImageView>
                         <Label fx:id="selectedMovieDesc" alignment="CENTER" prefHeight="226.0" prefWidth="340.0" text="*Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie * Here goes the description of the movie *" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font name="Cambria" size="14.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
                      </children>
@@ -76,7 +76,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="720.0" styleClass="color0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="202.0" styleClass="searchbox">
+                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="202.0" styleClass="labelbox">
                            <HBox.margin>
                               <Insets bottom="10.0" top="28.0" />
                            </HBox.margin>
@@ -99,12 +99,12 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Movie:" wrappingWidth="80.0">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                               <Text fx:id="movieTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="*Moviename*" wrappingWidth="180.0034236907959">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                            </children>
@@ -116,12 +116,12 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="80.0">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                               <Text fx:id="movieDate" strokeType="OUTSIDE" strokeWidth="0.0" text="*DD/MM/YYYY*" wrappingWidth="180.0034236907959">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                            </children>
@@ -133,12 +133,12 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time:" wrappingWidth="80.0">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                               <Text fx:id="movieTime" strokeType="OUTSIDE" strokeWidth="0.0" text="*YY:ZZ*" wrappingWidth="180.0034236907959">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                            </children>
@@ -150,12 +150,12 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seat:" wrappingWidth="80.0">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                               <Text fx:id="movieSeat" strokeType="OUTSIDE" strokeWidth="0.0" text="*A0*" wrappingWidth="180.0034236907959">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                            </children>
@@ -167,12 +167,12 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="80.0">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                               <Text fx:id="moviePrice" strokeType="OUTSIDE" strokeWidth="0.0" text="9.50€" wrappingWidth="180.0034236907959">
                                  <font>
-                                    <Font name="Comic Sans MS" size="18.0" />
+                                    <Font name="Comic Sans MS" size="22.0" />
                                  </font>
                               </Text>
                            </children>
@@ -183,17 +183,17 @@
                         <HBox prefHeight="47.0" prefWidth="720.0" />
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="60.0">
                            <children>
-                              <Label prefHeight="18.0" prefWidth="100.0" text="Card number">
+                              <Label prefHeight="26.0" prefWidth="126.0" text="Card number">
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="18.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="cardNumber" prefHeight="30.0" prefWidth="184.0" promptText="XXXXXXXXXXXXXXXX" styleClass="searchbox" stylesheets="@../css-files/paymentPage.css">
+                              <TextField fx:id="cardNumber" prefHeight="46.0" prefWidth="218.0" promptText="XXXXXXXXXXXXXXXX" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="16.0" />
                                  </font>
                                  <padding>
                                     <Insets left="10.0" />
@@ -203,12 +203,12 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="18.0" prefWidth="152.0" text="Expiration Date &amp; CVV">
+                              <Label prefHeight="26.0" prefWidth="173.0" text="Expiration Date &amp; CVV">
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="16.0" />
                                  </font>
                               </Label>
-                              <DatePicker fx:id="expiryDate" prefHeight="30.0" prefWidth="128.0" styleClass="custom-date-picker" stylesheets="@../css-files/paymentPage.css">
+                              <DatePicker fx:id="expiryDate" prefHeight="37.0" prefWidth="150.0" styleClass="custom-date-picker" stylesheets="@../css-files/paymentPage.css">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -216,7 +216,7 @@
                                     <Insets left="6.0" />
                                  </padding>
                               </DatePicker>
-                              <PasswordField fx:id="cvvField" alignment="CENTER" prefHeight="30.0" prefWidth="46.0" promptText="YYY" styleClass="searchbox" stylesheets="@../css-files/paymentPage.css">
+                              <PasswordField fx:id="cvvField" alignment="CENTER" prefHeight="34.0" prefWidth="60.0" promptText="YYY" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
                                  <font>
                                     <Font name="Comic Sans MS" size="14.0" />
                                  </font>
@@ -225,34 +225,34 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="35.0" prefWidth="158.0" text="Name/owner of card" wrapText="true">
+                              <Label prefHeight="36.0" prefWidth="182.0" text="Name/owner of card" wrapText="true">
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="18.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="ownerOfCardField" prefHeight="30.0" prefWidth="184.0" styleClass="searchbox" stylesheets="@../css-files/paymentPage.css">
+                              <TextField fx:id="ownerOfCardField" prefHeight="34.0" prefWidth="218.0" styleClass="labelbox" stylesheets="@../css-files/paymentPage.css">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="16.0" />
                                  </font>
                               </TextField>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0" spacing="97.0">
                            <children>
-                              <Label prefHeight="18.0" prefWidth="66.0" text="e-Μail">
+                              <Label prefHeight="26.0" prefWidth="90.0" text="e-Μail">
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="18.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="emailConfirmField" prefHeight="30.0" prefWidth="184.0" styleClass="searchbox">
+                              <TextField fx:id="emailConfirmField" prefHeight="33.0" prefWidth="219.0" styleClass="labelbox">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
                                  <font>
-                                    <Font name="Comic Sans MS" size="14.0" />
+                                    <Font name="Comic Sans MS" size="16.0" />
                                  </font>
                               </TextField>
                            </children>
