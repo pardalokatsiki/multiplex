@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RunTests" default="test" basedir=".">
+    <!-- Ρυθμίσεις για το πού βρίσκεται ο κώδικάς σου -->
+    <property name="src.dir" value="src"/>
+    <!-- Το NetBeans συνήθως φτιάχνει τον φάκελο build/classes για τα compiled αρχεία -->
+    <property name="build.dir" value="build/classes/multiplex"/>
+    <property name="lib.dir" value="lib"/>
+
+    <target name="test">
+        <java classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="true">
+        <jvmarg value="-XX:+EnableDynamicAgentLoading"/>
+            <classpath>
+                <pathelement location="build/classes"/>
+                <fileset dir="New_libs" includes="*.jar"/>
+                <fileset dir="lib" includes="*.jar"/>
+            </classpath>
+            <arg value="execute"/>
+            <arg value="--scan-classpath"/>
+        </java>
+    </target>
+</project>

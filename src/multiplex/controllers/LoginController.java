@@ -44,10 +44,11 @@ public class LoginController {
             // returns user if succesful, null if not
             User user = check.loginUser(name, pwd);
 
-            if (user != null)
+            if (user != null) {
                 // Move to Browse Page Scene
                 Session.setCurrentUser(user);
                 MultiplexController.switchScene(ViewScenes.BROWSE);
+            }
             // user = null
             errorLabel.setText("Login failed. Username With That Password Not Found\n");
         } else {

@@ -4,8 +4,6 @@ import multiplex.dbconnection.DBConnection;
 import multiplex.dataclasses.User;
 import java.sql.*;
 
-
-
 public class UserService {
 
     private Connection connection;
@@ -14,6 +12,10 @@ public class UserService {
 
     public UserService() {
         this.connection = DBConnection.getConnection(); //establishing a connection to the database using the DBConnection class
+    }
+
+    public UserService(Connection connection) {
+        this.connection = connection;
     }
 
     //Returns the logged in user
