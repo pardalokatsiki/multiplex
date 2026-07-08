@@ -1,0 +1,35 @@
+.root{
+    -fx-background-color:"#ffa5ab";
+    -fx-font-family: "Comic Sans MS";
+}
+
+#loginButton{
+    -fx-background-color:"#f9dbbd";
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+#loginButton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#e0c5aa";
+}
+
+#registerLink{
+    -fx-text-fill:"#6937bf";
+    -fx-font-size: 14px;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.textField{
+    -fx-background-color: "#F9EBF7";
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-size:16px;
+    -fx-font-family: "Comic Sans MS";
+}
+
+#errorLabel{
+    -fx-font-size: 14px;
+    -fx-font-family: "Comic Sans MS";
+}
+

@@ -1,0 +1,69 @@
+.root{
+    -fx-background-color:"#008000";
+}
+
+.color0{
+    -fx-background-color:"#f9dbbd";
+}
+
+.color1{
+    -fx-background-color:"#ffa5ab";
+}
+
+.color2{
+    -fx-background-color:"#da627d";
+}
+
+.color3{
+    -fx-background-color:"#a53860";
+}
+
+.color4{
+    -fx-background-color:"#450920";
+}
+
+#logoutButton{
+    -fx-background-color:"#da627d";
+    -fx-background-radius: 100px;
+}
+
+#logoutButton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#a53860";
+}
+
+#confirmItems, #backButton4{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+}
+
+#confirmItems:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+#backButton4:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+.snackLabel{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.my-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.my-scroll-pane > .viewport {
+    -fx-background-color: #f9dbbd;
+}

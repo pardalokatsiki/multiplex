@@ -1,0 +1,35 @@
+#confirmButton5, #backButton5{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+    -fx-background-radius: 100px;
+}
+
+#confirmButton5:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+#backButton5:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+
+}
+
+.custom-date-picker {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+}
+
+.custom-date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-padding: 4 5 4 10;
+}
+
+.custom-date-picker > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.custom-date-picker > .arrow-button > .arrow {
+    -fx-background-color: black;
+}

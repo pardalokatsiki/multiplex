@@ -1,0 +1,99 @@
+.root{
+    -fx-background-color:"#008000";
+    -fx-font-family: "Comic Sans MS";
+}
+
+.color0{
+    -fx-background-color:"#f9dbbd";
+}
+
+.color1{
+    -fx-background-color:"#ffa5ab";
+}
+
+.color2{
+    -fx-background-color:"#da627d";
+}
+
+.color3{
+    -fx-background-color:"#a53860";
+}
+
+.color4{
+    -fx-background-color:"#450920";
+}
+
+#selectedMovieTitle{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 26px;
+}
+
+#selectedMovieDesc{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18px;
+}
+
+#logoutButton{
+    -fx-background-color:"#da627d";
+    -fx-background-radius: 100px;
+}
+
+#logoutButton:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#a53860";
+}
+
+#confirmButton1, #backButton1{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+}
+
+#confirmButton1:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+}
+
+#backButton1:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+}
+
+#confirmButton2, #backButton2{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+}
+
+#confirmButton2:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+}
+
+#backButton2:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+}
+
+#confirmButton3, #backButton3{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+}
+
+#confirmButton3:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+}
+
+#backButton3:hover{
+    -fx-cursor: hand;
+    -fx-background-color: "#cc8489";
+}
+
+.labelbox{
+    -fx-background-color:"#FFFFFF";
+    -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}

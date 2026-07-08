@@ -1,22 +1,20 @@
 package multiplex;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import multiplex.controllers.MultiplexController;
 
+// Main class
 public class MultiplexView extends Application {
     public static void main(String[] args) {
        launch(args);
     }
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Multiplex.fxml"));
-        Scene scene = new Scene(root);
+    public void start(Stage primaryStage) {
+        // Set stage Login Page as primaryStage
+        MultiplexController.setStage(primaryStage);
         primaryStage.setTitle("Multiplex");
-        primaryStage.setScene(scene);
-        
-        primaryStage.show();
+        //primaryStage.setResizable(false); remove the comment αν δεν λειτουργεί το fullscreen
+        MultiplexController.switchScene(ViewScenes.LOGIN);
     }
 }

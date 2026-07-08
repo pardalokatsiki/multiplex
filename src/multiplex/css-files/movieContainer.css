@@ -1,0 +1,31 @@
+.root{
+    -fx-font-family: "Comic Sans MS";
+}
+
+#movieContainer{
+    -fx-background-color: "#f9dbbd";
+}
+
+#imageBorder{
+    -fx-background-color: "#dc4423";
+}
+
+#movieTitleButton{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18px;
+    -fx-background-color:"#fffaba";
+    -fx-background-radius: 100px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: "#dc4423";
+}
+
+#movieTitleButton:hover{
+    fx-cursor: hand;
+    -fx-background-color:"#ffcaba";
+}
+
+#movieTitleButton:selected{
+    -fx-background-color:"#f0b087";
+    -fx-border-color: "#dc4423";
+}
