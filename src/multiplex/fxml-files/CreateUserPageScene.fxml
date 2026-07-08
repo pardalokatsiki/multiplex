@@ -104,7 +104,7 @@
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Button>
-                              <Label fx:id="errorLabel" prefHeight="31.0" prefWidth="570.0">
+                              <Label fx:id="errorLabel" alignment="CENTER" prefHeight="31.0" prefWidth="570.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font></Label>

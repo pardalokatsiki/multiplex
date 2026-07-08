@@ -1,5 +1,6 @@
 .root{
     -fx-background-color:"#008000";
+    -fx-font-family: "Comic Sans MS";
 }
 
 .color0{
@@ -30,32 +31,47 @@
 #logoutButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#a53860";
+    -fx-font-family: "Comic Sans MS";
 }
 
 #ticketButton{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #ticketButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
+    -fx-font-family: "Comic Sans MS";
+}
 
+#movieDesc{
+    -fx-font-size: 18px;
+    -fx-font-family: "Comic Sans MS";
+}
+
+#movieTitle{
+    -fx-font-size: 26px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #searchButton{
     -fx-background-color:"#e6959a";
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 #searchButton:hover{
     -fx-cursor: hand;
     -fx-background-color: "#cc8489";
+    -fx-font-family: "Comic Sans MS";
 }
 
 .searchbox{
     -fx-background-color:"#FFFFFF";
     -fx-background-radius: 100px;
+    -fx-font-family: "Comic Sans MS";
 }
 
 .transparent{
