@@ -90,7 +90,7 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #FEBD0;" styleClass="my-scroll-pane" stylesheets="@../css-files/browsePage.css" VBox.vgrow="ALWAYS">
+                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="my-scroll-pane" stylesheets="@../css-files/browsePage.css" VBox.vgrow="ALWAYS">
                      <content>
                         <VBox fx:id="timeList" alignment="CENTER" spacing="20.0" />
                      </content>

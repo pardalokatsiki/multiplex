@@ -100,7 +100,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #FEBD0;" styleClass="my-scroll-pane" stylesheets="@../css-files/browsePage.css" VBox.vgrow="ALWAYS">
+                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="my-scroll-pane" stylesheets="@../css-files/browsePage.css" VBox.vgrow="ALWAYS">
                      <content>
                         <TilePane fx:id="seatList" alignment="CENTER" hgap="15.0" styleClass="my-scroll-pane" vgap="15.0" />
                      </content>

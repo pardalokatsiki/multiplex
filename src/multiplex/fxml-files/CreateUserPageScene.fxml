@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../css-files/registerPage.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiplex.controllers.CreateUserController">
    <children>
-      <VBox prefHeight="720.0" prefWidth="1080.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="720.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0">
                <children>
@@ -48,10 +48,13 @@
                   </Label>
                </children>
                <VBox.margin>
-                  <Insets bottom="30.0" />
+                  <Insets bottom="50.0" />
                </VBox.margin>
+               <padding>
+                  <Insets bottom="50.0" />
+               </padding>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="250.0" prefWidth="1080.0" spacing="10.0">
+            <VBox alignment="CENTER" prefHeight="380.0" prefWidth="1080.0" spacing="10.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="4.0" prefWidth="1080.0">
                      <children>
@@ -98,25 +101,27 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <Button fx:id="createAccountButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountClick" prefHeight="34.0" prefWidth="162.0" text="Create account" textAlignment="CENTER">
-                     <font>
-                        <Font name="Comic Sans MS" size="16.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1080.0" textAlignment="CENTER" textFill="RED" wrapText="true">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="20.0" top="30.0" />
-                     </padding>
-                  </Label>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1080.0">
+                     <children>
+                        <Button fx:id="createAccountButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountClick" prefHeight="34.0" prefWidth="162.0" text="Create account" textAlignment="CENTER">
+                           <font>
+                              <Font name="Comic Sans MS" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefWidth="1080.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="errorLabel" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="190.0" prefWidth="817.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
-            <VBox alignment="CENTER">
+            <VBox alignment="TOP_CENTER">
                <children>
                   <Label alignment="CENTER" prefHeight="3.0" prefWidth="694.0" text="Did you know?" textAlignment="CENTER">
                      <font>
@@ -129,9 +134,6 @@
                      </font>
                   </Label>
                </children>
-               <padding>
-                  <Insets top="39.5" />
-               </padding>
             </VBox>
          </children>
       </VBox>
